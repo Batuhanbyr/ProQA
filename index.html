@@ -1,0 +1,1883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="Asciidoctor 0.1.4">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Template</title>
+<style>
+/* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
+audio, canvas, video { display: inline-block; }
+audio:not([controls]) { display: none; height: 0; }
+[hidden] { display: none; }
+html { background: #fff; color: #000; font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
+body { margin: 0; }
+a:focus { outline: thin dotted; }
+a:active, a:hover { outline: 0; }
+h1 { font-size: 2em; margin: 0.67em 0; }
+abbr[title] { border-bottom: 1px dotted; }
+b, strong { font-weight: bold; }
+dfn { font-style: italic; }
+hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
+mark { background: #ff0; color: #000; }
+code, kbd, pre, samp { font-family: monospace, serif; font-size: 1em; }
+pre { white-space: pre-wrap; }
+q { quotes: "\201C" "\201D" "\2018" "\2019"; }
+small { font-size: 80%; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+img { border: 0; }
+svg:not(:root) { overflow: hidden; }
+figure { margin: 0; }
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
+legend { border: 0; padding: 0; }
+button, input, select, textarea { font-family: inherit; font-size: 100%; margin: 0; }
+button, input { line-height: normal; }
+button, select { text-transform: none; }
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; cursor: pointer; }
+button[disabled], html input[disabled] { cursor: default; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+textarea { overflow: auto; vertical-align: top; }
+table { border-collapse: collapse; border-spacing: 0; }
+*, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+html, body { font-size: 100%; }
+body { background: white; color: #222222; padding: 0; margin: 0; font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-weight: normal; font-style: normal; line-height: 1; position: relative; cursor: auto; }
+a:hover { cursor: pointer; }
+a:focus { outline: none; }
+img, object, embed { max-width: 100%; height: auto; }
+object, embed { height: 100%; }
+img { -ms-interpolation-mode: bicubic; }
+#map_canvas img, #map_canvas embed, #map_canvas object, .map_canvas img, .map_canvas embed, .map_canvas object { max-width: none !important; }
+.left { float: left !important; }
+.right { float: right !important; }
+.text-left { text-align: left !important; }
+.text-right { text-align: right !important; }
+.text-center { text-align: center !important; }
+.text-justify { text-align: justify !important; }
+.hide { display: none; }
+.antialiased, body { -webkit-font-smoothing: antialiased; }
+img { display: inline-block; vertical-align: middle; }
+textarea { height: auto; min-height: 50px; }
+select { width: 100%; }
+p.lead, .paragraph.lead > p, #preamble > .sectionbody > .paragraph:first-of-type p { font-size: 1.21875em; line-height: 1.6; }
+.subheader, #content #toctitle, .admonitionblock td.content > .title, .exampleblock > .title, .imageblock > .title, .videoblock > .title, .listingblock > .title, .literalblock > .title, .openblock > .title, .paragraph > .title, .quoteblock > .title, .sidebarblock > .title, .tableblock > .title, .verseblock > .title, .dlist > .title, .olist > .title, .ulist > .title, .qlist > .title, .hdlist > .title, .tableblock > caption { line-height: 1.4; color: #7a2518; font-weight: 300; margin-top: 0.2em; margin-bottom: 0.5em; }
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, #toctitle, .sidebarblock > .content > .title, h4, h5, h6, pre, form, p, blockquote, th, td { margin: 0; padding: 0; direction: ltr; }
+a { color: #005498; text-decoration: underline; line-height: inherit; }
+a:hover, a:focus { color: #00467f; }
+a img { border: none; }
+p { font-family: inherit; font-weight: normal; font-size: 1em; line-height: 1.6; margin-bottom: 1.25em; text-rendering: optimizeLegibility; }
+p aside { font-size: 0.875em; line-height: 1.35; font-style: italic; }
+h1, h2, h3, #toctitle, .sidebarblock > .content > .title, h4, h5, h6 { font-family: Georgia, "URW Bookman L", Helvetica, Arial, sans-serif; font-weight: normal; font-style: normal; color: #ba3925; text-rendering: optimizeLegibility; margin-top: 1em; margin-bottom: 0.5em; line-height: 1.2125em; }
+h1 small, h2 small, h3 small, #toctitle small, .sidebarblock > .content > .title small, h4 small, h5 small, h6 small { font-size: 60%; color: #e99b8f; line-height: 0; }
+h1 { font-size: 2.125em; }
+h2 { font-size: 1.6875em; }
+h3, #toctitle, .sidebarblock > .content > .title { font-size: 1.375em; }
+h4 { font-size: 1.125em; }
+h5 { font-size: 1.125em; }
+h6 { font-size: 1em; }
+hr { border: solid #dddddd; border-width: 1px 0 0; clear: both; margin: 1.25em 0 1.1875em; height: 0; }
+em, i { font-style: italic; line-height: inherit; }
+strong, b { font-weight: bold; line-height: inherit; }
+small { font-size: 60%; line-height: inherit; }
+code { font-family: Consolas, "Liberation Mono", Courier, monospace; font-weight: normal; color: #6d180b; }
+ul, ol, dl { font-size: 1em; line-height: 1.6; margin-bottom: 1.25em; list-style-position: outside; font-family: inherit; }
+ul, ol { margin-left: 1.5em; }
+ul li ul, ul li ol { margin-left: 1.25em; margin-bottom: 0; font-size: 1em; }
+ul.square li ul, ul.circle li ul, ul.disc li ul { list-style: inherit; }
+ul.square { list-style-type: square; }
+ul.circle { list-style-type: circle; }
+ul.disc { list-style-type: disc; }
+ul.no-bullet { list-style: none; }
+ol li ul, ol li ol { margin-left: 1.25em; margin-bottom: 0; }
+dl dt { margin-bottom: 0.3125em; font-weight: bold; }
+dl dd { margin-bottom: 1.25em; }
+abbr, acronym { text-transform: uppercase; font-size: 90%; color: #222222; border-bottom: 1px dotted #dddddd; cursor: help; }
+abbr { text-transform: none; }
+blockquote { margin: 0 0 1.25em; padding: 0.5625em 1.25em 0 1.1875em; border-left: 1px solid #dddddd; }
+blockquote cite { display: block; font-size: inherit; color: #555555; }
+blockquote cite:before { content: "\2014 \0020"; }
+blockquote cite a, blockquote cite a:visited { color: #555555; }
+blockquote, blockquote p { line-height: 1.6; color: #6f6f6f; }
+.vcard { display: inline-block; margin: 0 0 1.25em 0; border: 1px solid #dddddd; padding: 0.625em 0.75em; }
+.vcard li { margin: 0; display: block; }
+.vcard .fn { font-weight: bold; font-size: 0.9375em; }
+.vevent .summary { font-weight: bold; }
+.vevent abbr { cursor: auto; text-decoration: none; font-weight: bold; border: none; padding: 0 0.0625em; }
+@media only screen and (min-width: 768px) { h1, h2, h3, #toctitle, .sidebarblock > .content > .title, h4, h5, h6 { line-height: 1.4; }
+  h1 { font-size: 2.75em; }
+  h2 { font-size: 2.3125em; }
+  h3, #toctitle, .sidebarblock > .content > .title { font-size: 1.6875em; }
+  h4 { font-size: 1.4375em; } }
+.print-only { display: none !important; }
+@media print { * { background: transparent !important; color: #000 !important; box-shadow: none !important; text-shadow: none !important; }
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3, #toctitle, .sidebarblock > .content > .title { orphans: 3; widows: 3; }
+  h2, h3, #toctitle, .sidebarblock > .content > .title { page-break-after: avoid; }
+  .hide-on-print { display: none !important; }
+  .print-only { display: block !important; }
+  .hide-for-print { display: none !important; }
+  .show-for-print { display: inherit !important; } }
+table { background: white; margin-bottom: 1.25em; border: solid 1px #dddddd; }
+table thead, table tfoot { background: whitesmoke; font-weight: bold; }
+table thead tr th, table thead tr td, table tfoot tr th, table tfoot tr td { padding: 0.5em 0.625em 0.625em; font-size: inherit; color: #222222; text-align: left; }
+table tr th, table tr td { padding: 0.5625em 0.625em; font-size: inherit; color: #222222; }
+table tr.even, table tr.alt, table tr:nth-of-type(even) { background: #f9f9f9; }
+table thead tr th, table tfoot tr th, table tbody tr td, table tr td, table tfoot tr td { display: table-cell; line-height: 1.6; }
+.clearfix:before, .clearfix:after, .float-group:before, .float-group:after { content: " "; display: table; }
+.clearfix:after, .float-group:after { clear: both; }
+*:not(pre) > code { font-size: 0.9375em; padding: 1px 3px 0; white-space: nowrap; background-color: #f2f2f2; border: 1px solid #cccccc; -webkit-border-radius: 4px; border-radius: 4px; text-shadow: none; }
+pre, pre > code { line-height: 1.4; color: inherit; font-family: Consolas, "Liberation Mono", Courier, monospace; font-weight: normal; }
+kbd.keyseq { color: #555555; }
+kbd:not(.keyseq) { display: inline-block; color: #222222; font-size: 0.75em; line-height: 1.4; background-color: #F7F7F7; border: 1px solid #ccc; -webkit-border-radius: 3px; border-radius: 3px; -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px white inset; box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px white inset; margin: -0.15em 0.15em 0 0.15em; padding: 0.2em 0.6em 0.2em 0.5em; vertical-align: middle; white-space: nowrap; }
+kbd kbd:first-child { margin-left: 0; }
+kbd kbd:last-child { margin-right: 0; }
+.menuseq, .menu { color: #090909; }
+p a > code:hover { color: #561309; }
+#header, #content, #footnotes, #footer { width: 100%; margin-left: auto; margin-right: auto; margin-top: 0; margin-bottom: 0; max-width: 62.5em; *zoom: 1; position: relative; padding-left: 0.9375em; padding-right: 0.9375em; }
+#header:before, #header:after, #content:before, #content:after, #footnotes:before, #footnotes:after, #footer:before, #footer:after { content: " "; display: table; }
+#header:after, #content:after, #footnotes:after, #footer:after { clear: both; }
+#header { margin-bottom: 2.5em; }
+#header > h1 { color: black; font-weight: normal; border-bottom: 1px solid #dddddd; margin-bottom: -28px; padding-bottom: 32px; }
+#header span { color: #6f6f6f; }
+#header #revnumber { text-transform: capitalize; }
+#header br { display: none; }
+#header br + span { padding-left: 3px; }
+#header br + span:before { content: "\2013 \0020"; }
+#header br + span.author { padding-left: 0; }
+#header br + span.author:before { content: ", "; }
+#toc { border-bottom: 3px double #ebebeb; padding-bottom: 1.25em; }
+#toc > ul { margin-left: 0.25em; }
+#toc ul.sectlevel0 > li > a { font-style: italic; }
+#toc ul.sectlevel0 ul.sectlevel1 { margin-left: 0; margin-top: 0.5em; margin-bottom: 0.5em; }
+#toc ul { list-style-type: none; }
+#toctitle { color: #7a2518; }
+@media only screen and (min-width: 1280px) { body.toc2 { padding-left: 20em; }
+  #toc.toc2 { position: fixed; width: 20em; left: 0; top: 0; border-right: 1px solid #ebebeb; border-bottom: 0; z-index: 1000; padding: 1em; height: 100%; overflow: auto; }
+  #toc.toc2 #toctitle { margin-top: 0; }
+  #toc.toc2 > ul { font-size: .95em; }
+  #toc.toc2 ul ul { margin-left: 0; padding-left: 1.25em; }
+  #toc.toc2 ul.sectlevel0 ul.sectlevel1 { padding-left: 0; margin-top: 0.5em; margin-bottom: 0.5em; }
+  body.toc2.toc-right { padding-left: 0; padding-right: 20em; }
+  body.toc2.toc-right #toc.toc2 { border-right: 0; border-left: 1px solid #ebebeb; left: auto; right: 0; } }
+#content #toc { border-style: solid; border-width: 1px; border-color: #d9d9d9; margin-bottom: 1.25em; padding: 1.25em; background: #f2f2f2; border-width: 0; -webkit-border-radius: 4px; border-radius: 4px; }
+#content #toc > :first-child { margin-top: 0; }
+#content #toc > :last-child { margin-bottom: 0; }
+#content #toc a { text-decoration: none; }
+#content #toctitle { font-weight: bold; font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-size: 1em; padding-left: 0.125em; }
+#footer { max-width: 100%; background-color: #222222; padding: 1.25em; }
+#footer-text { color: #dddddd; line-height: 1.44; }
+.sect1 { padding-bottom: 1.25em; }
+.sect1 + .sect1 { border-top: 3px double #ebebeb; }
+#content h1 > a.anchor, h2 > a.anchor, h3 > a.anchor, #toctitle > a.anchor, .sidebarblock > .content > .title > a.anchor, h4 > a.anchor, h5 > a.anchor, h6 > a.anchor { position: absolute; width: 1em; margin-left: -1em; display: block; text-decoration: none; visibility: hidden; text-align: center; font-weight: normal; }
+#content h1 > a.anchor:before, h2 > a.anchor:before, h3 > a.anchor:before, #toctitle > a.anchor:before, .sidebarblock > .content > .title > a.anchor:before, h4 > a.anchor:before, h5 > a.anchor:before, h6 > a.anchor:before { content: '\00A7'; font-size: .85em; vertical-align: text-top; display: block; margin-top: 0.05em; }
+#content h1:hover > a.anchor, #content h1 > a.anchor:hover, h2:hover > a.anchor, h2 > a.anchor:hover, h3:hover > a.anchor, #toctitle:hover > a.anchor, .sidebarblock > .content > .title:hover > a.anchor, h3 > a.anchor:hover, #toctitle > a.anchor:hover, .sidebarblock > .content > .title > a.anchor:hover, h4:hover > a.anchor, h4 > a.anchor:hover, h5:hover > a.anchor, h5 > a.anchor:hover, h6:hover > a.anchor, h6 > a.anchor:hover { visibility: visible; }
+#content h1 > a.link, h2 > a.link, h3 > a.link, #toctitle > a.link, .sidebarblock > .content > .title > a.link, h4 > a.link, h5 > a.link, h6 > a.link { color: #ba3925; text-decoration: none; }
+#content h1 > a.link:hover, h2 > a.link:hover, h3 > a.link:hover, #toctitle > a.link:hover, .sidebarblock > .content > .title > a.link:hover, h4 > a.link:hover, h5 > a.link:hover, h6 > a.link:hover { color: #a53221; }
+.imageblock, .literalblock, .listingblock, .verseblock, .videoblock { margin-bottom: 1.25em; }
+.admonitionblock td.content > .title, .exampleblock > .title, .imageblock > .title, .videoblock > .title, .listingblock > .title, .literalblock > .title, .openblock > .title, .paragraph > .title, .quoteblock > .title, .sidebarblock > .title, .tableblock > .title, .verseblock > .title, .dlist > .title, .olist > .title, .ulist > .title, .qlist > .title, .hdlist > .title { text-align: left; font-weight: bold; }
+.tableblock > caption { text-align: left; font-weight: bold; white-space: nowrap; overflow: visible; max-width: 0; }
+table.tableblock #preamble > .sectionbody > .paragraph:first-of-type p { font-size: inherit; }
+.admonitionblock > table { border: 0; background: none; width: 100%; }
+.admonitionblock > table td.icon { text-align: center; width: 80px; }
+.admonitionblock > table td.icon img { max-width: none; }
+.admonitionblock > table td.icon .title { font-weight: bold; text-transform: uppercase; }
+.admonitionblock > table td.content { padding-left: 1.125em; padding-right: 1.25em; border-left: 1px solid #dddddd; color: #6f6f6f; }
+.admonitionblock > table td.content > :last-child > :last-child { margin-bottom: 0; }
+.exampleblock > .content { border-style: solid; border-width: 1px; border-color: #e6e6e6; margin-bottom: 1.25em; padding: 1.25em; background: white; -webkit-border-radius: 4px; border-radius: 4px; }
+.exampleblock > .content > :first-child { margin-top: 0; }
+.exampleblock > .content > :last-child { margin-bottom: 0; }
+.exampleblock > .content h1, .exampleblock > .content h2, .exampleblock > .content h3, .exampleblock > .content #toctitle, .sidebarblock.exampleblock > .content > .title, .exampleblock > .content h4, .exampleblock > .content h5, .exampleblock > .content h6, .exampleblock > .content p { color: #333333; }
+.exampleblock > .content h1, .exampleblock > .content h2, .exampleblock > .content h3, .exampleblock > .content #toctitle, .sidebarblock.exampleblock > .content > .title, .exampleblock > .content h4, .exampleblock > .content h5, .exampleblock > .content h6 { line-height: 1; margin-bottom: 0.625em; }
+.exampleblock > .content h1.subheader, .exampleblock > .content h2.subheader, .exampleblock > .content h3.subheader, .exampleblock > .content .subheader#toctitle, .sidebarblock.exampleblock > .content > .subheader.title, .exampleblock > .content h4.subheader, .exampleblock > .content h5.subheader, .exampleblock > .content h6.subheader { line-height: 1.4; }
+.exampleblock.result > .content { -webkit-box-shadow: 0 1px 8px #d9d9d9; box-shadow: 0 1px 8px #d9d9d9; }
+.sidebarblock { border-style: solid; border-width: 1px; border-color: #d9d9d9; margin-bottom: 1.25em; padding: 1.25em; background: #f2f2f2; -webkit-border-radius: 4px; border-radius: 4px; }
+.sidebarblock > :first-child { margin-top: 0; }
+.sidebarblock > :last-child { margin-bottom: 0; }
+.sidebarblock h1, .sidebarblock h2, .sidebarblock h3, .sidebarblock #toctitle, .sidebarblock > .content > .title, .sidebarblock h4, .sidebarblock h5, .sidebarblock h6, .sidebarblock p { color: #333333; }
+.sidebarblock h1, .sidebarblock h2, .sidebarblock h3, .sidebarblock #toctitle, .sidebarblock > .content > .title, .sidebarblock h4, .sidebarblock h5, .sidebarblock h6 { line-height: 1; margin-bottom: 0.625em; }
+.sidebarblock h1.subheader, .sidebarblock h2.subheader, .sidebarblock h3.subheader, .sidebarblock .subheader#toctitle, .sidebarblock > .content > .subheader.title, .sidebarblock h4.subheader, .sidebarblock h5.subheader, .sidebarblock h6.subheader { line-height: 1.4; }
+.sidebarblock > .content > .title { color: #7a2518; margin-top: 0; line-height: 1.6; }
+.exampleblock > .content > :last-child > :last-child, .exampleblock > .content .olist > ol > li:last-child > :last-child, .exampleblock > .content .ulist > ul > li:last-child > :last-child, .exampleblock > .content .qlist > ol > li:last-child > :last-child, .sidebarblock > .content > :last-child > :last-child, .sidebarblock > .content .olist > ol > li:last-child > :last-child, .sidebarblock > .content .ulist > ul > li:last-child > :last-child, .sidebarblock > .content .qlist > ol > li:last-child > :last-child { margin-bottom: 0; }
+.literalblock > .content pre, .listingblock > .content pre { background: none; border-width: 1px 0; border-style: dotted; border-color: #bfbfbf; -webkit-border-radius: 4px; border-radius: 4px; padding: 0.75em 0.75em 0.5em 0.75em; word-wrap: break-word; }
+.literalblock > .content pre.nowrap, .listingblock > .content pre.nowrap { overflow-x: auto; white-space: pre; word-wrap: normal; }
+.literalblock > .content pre > code, .listingblock > .content pre > code { display: block; }
+@media only screen { .literalblock > .content pre, .listingblock > .content pre { font-size: 0.8em; } }
+@media only screen and (min-width: 768px) { .literalblock > .content pre, .listingblock > .content pre { font-size: 0.9em; } }
+@media only screen and (min-width: 1280px) { .literalblock > .content pre, .listingblock > .content pre { font-size: 1em; } }
+.listingblock > .content { position: relative; }
+.listingblock:hover code[class*=" language-"]:before { text-transform: uppercase; font-size: 0.9em; color: #999; position: absolute; top: 0.375em; right: 0.375em; }
+.listingblock:hover code.asciidoc:before { content: "asciidoc"; }
+.listingblock:hover code.clojure:before { content: "clojure"; }
+.listingblock:hover code.css:before { content: "css"; }
+.listingblock:hover code.groovy:before { content: "groovy"; }
+.listingblock:hover code.html:before { content: "html"; }
+.listingblock:hover code.java:before { content: "java"; }
+.listingblock:hover code.javascript:before { content: "javascript"; }
+.listingblock:hover code.python:before { content: "python"; }
+.listingblock:hover code.ruby:before { content: "ruby"; }
+.listingblock:hover code.scss:before { content: "scss"; }
+.listingblock:hover code.xml:before { content: "xml"; }
+.listingblock:hover code.yaml:before { content: "yaml"; }
+.listingblock.terminal pre .command:before { content: attr(data-prompt); padding-right: 0.5em; color: #999; }
+.listingblock.terminal pre .command:not([data-prompt]):before { content: '$'; }
+table.pyhltable { border: 0; margin-bottom: 0; }
+table.pyhltable td { vertical-align: top; padding-top: 0; padding-bottom: 0; }
+table.pyhltable td.code { padding-left: .75em; padding-right: 0; }
+.highlight.pygments .lineno, table.pyhltable td:not(.code) { color: #999; padding-left: 0; padding-right: .5em; border-right: 1px solid #dddddd; }
+.highlight.pygments .lineno { display: inline-block; margin-right: .25em; }
+table.pyhltable .linenodiv { background-color: transparent !important; padding-right: 0 !important; }
+.quoteblock { margin: 0 0 1.25em; padding: 0.5625em 1.25em 0 1.1875em; border-left: 1px solid #dddddd; }
+.quoteblock blockquote { margin: 0 0 1.25em 0; padding: 0 0 0.5625em 0; border: 0; }
+.quoteblock blockquote > .paragraph:last-child p { margin-bottom: 0; }
+.quoteblock .attribution { margin-top: -.25em; padding-bottom: 0.5625em; font-size: inherit; color: #555555; }
+.quoteblock .attribution br { display: none; }
+.quoteblock .attribution cite { display: block; margin-bottom: 0.625em; }
+table thead th, table tfoot th { font-weight: bold; }
+table.tableblock.grid-all { border-collapse: separate; border-spacing: 1px; -webkit-border-radius: 4px; border-radius: 4px; border-top: 1px solid #dddddd; border-bottom: 1px solid #dddddd; }
+table.tableblock.frame-topbot, table.tableblock.frame-none { border-left: 0; border-right: 0; }
+table.tableblock.frame-sides, table.tableblock.frame-none { border-top: 0; border-bottom: 0; }
+table.tableblock td .paragraph:last-child p, table.tableblock td > p:last-child { margin-bottom: 0; }
+th.tableblock.halign-left, td.tableblock.halign-left { text-align: left; }
+th.tableblock.halign-right, td.tableblock.halign-right { text-align: right; }
+th.tableblock.halign-center, td.tableblock.halign-center { text-align: center; }
+th.tableblock.valign-top, td.tableblock.valign-top { vertical-align: top; }
+th.tableblock.valign-bottom, td.tableblock.valign-bottom { vertical-align: bottom; }
+th.tableblock.valign-middle, td.tableblock.valign-middle { vertical-align: middle; }
+p.tableblock.header { color: #222222; font-weight: bold; }
+td > div.verse { white-space: pre; }
+ol { margin-left: 1.75em; }
+ul li ol { margin-left: 1.5em; }
+dl dd { margin-left: 1.125em; }
+dl dd:last-child, dl dd:last-child > :last-child { margin-bottom: 0; }
+ol > li p, ul > li p, ul dd, ol dd, .olist .olist, .ulist .ulist, .ulist .olist, .olist .ulist { margin-bottom: 0.625em; }
+ul.unstyled, ol.unnumbered, ul.checklist, ul.none { list-style-type: none; }
+ul.unstyled, ol.unnumbered, ul.checklist { margin-left: 0.625em; }
+ul.checklist li > p:first-child > i[class^="icon-check"]:first-child, ul.checklist li > p:first-child > input[type="checkbox"]:first-child { margin-right: 0.25em; }
+ul.checklist li > p:first-child > input[type="checkbox"]:first-child { position: relative; top: 1px; }
+ul.inline { margin: 0 auto 0.625em auto; margin-left: -1.375em; margin-right: 0; padding: 0; list-style: none; overflow: hidden; }
+ul.inline > li { list-style: none; float: left; margin-left: 1.375em; display: block; }
+ul.inline > li > * { display: block; }
+.unstyled dl dt { font-weight: normal; font-style: normal; }
+ol.arabic { list-style-type: decimal; }
+ol.decimal { list-style-type: decimal-leading-zero; }
+ol.loweralpha { list-style-type: lower-alpha; }
+ol.upperalpha { list-style-type: upper-alpha; }
+ol.lowerroman { list-style-type: lower-roman; }
+ol.upperroman { list-style-type: upper-roman; }
+ol.lowergreek { list-style-type: lower-greek; }
+.hdlist > table, .colist > table { border: 0; background: none; }
+.hdlist > table > tbody > tr, .colist > table > tbody > tr { background: none; }
+td.hdlist1 { padding-right: .8em; font-weight: bold; }
+td.hdlist1, td.hdlist2 { vertical-align: top; }
+.literalblock + .colist, .listingblock + .colist { margin-top: -0.5em; }
+.colist > table tr > td:first-of-type { padding: 0 .8em; line-height: 1; }
+.colist > table tr > td:last-of-type { padding: 0.25em 0; }
+.qanda > ol > li > p > em:only-child { color: #00467f; }
+.thumb, .th { line-height: 0; display: inline-block; border: solid 4px white; -webkit-box-shadow: 0 0 0 1px #dddddd; box-shadow: 0 0 0 1px #dddddd; }
+.imageblock.left, .imageblock[style*="float: left"] { margin: 0.25em 0.625em 1.25em 0; }
+.imageblock.right, .imageblock[style*="float: right"] { margin: 0.25em 0 1.25em 0.625em; }
+.imageblock > .title { margin-bottom: 0; }
+.imageblock.thumb, .imageblock.th { border-width: 6px; }
+.imageblock.thumb > .title, .imageblock.th > .title { padding: 0 0.125em; }
+.image.left, .image.right { margin-top: 0.25em; margin-bottom: 0.25em; display: inline-block; line-height: 0; }
+.image.left { margin-right: 0.625em; }
+.image.right { margin-left: 0.625em; }
+a.image { text-decoration: none; }
+span.footnote, span.footnoteref { vertical-align: super; font-size: 0.875em; }
+span.footnote a, span.footnoteref a { text-decoration: none; }
+#footnotes { padding-top: 0.75em; padding-bottom: 0.75em; margin-bottom: 0.625em; }
+#footnotes hr { width: 20%; min-width: 6.25em; margin: -.25em 0 .75em 0; border-width: 1px 0 0 0; }
+#footnotes .footnote { padding: 0 0.375em; line-height: 1.3; font-size: 0.875em; margin-left: 1.2em; text-indent: -1.2em; margin-bottom: .2em; }
+#footnotes .footnote a:first-of-type { font-weight: bold; text-decoration: none; }
+#footnotes .footnote:last-of-type { margin-bottom: 0; }
+#content #footnotes { margin-top: -0.625em; margin-bottom: 0; padding: 0.75em 0; }
+.gist .file-data > table { border: none; background: #fff; width: 100%; margin-bottom: 0; }
+.gist .file-data > table td.line-data { width: 99%; }
+div.unbreakable { page-break-inside: avoid; }
+.big { font-size: larger; }
+.small { font-size: smaller; }
+.underline { text-decoration: underline; }
+.overline { text-decoration: overline; }
+.line-through { text-decoration: line-through; }
+.aqua { color: #00bfbf; }
+.aqua-background { background-color: #00fafa; }
+.black { color: black; }
+.black-background { background-color: black; }
+.blue { color: #0000bf; }
+.blue-background { background-color: #0000fa; }
+.fuchsia { color: #bf00bf; }
+.fuchsia-background { background-color: #fa00fa; }
+.gray { color: #606060; }
+.gray-background { background-color: #7d7d7d; }
+.green { color: #006000; }
+.green-background { background-color: #007d00; }
+.lime { color: #00bf00; }
+.lime-background { background-color: #00fa00; }
+.maroon { color: #600000; }
+.maroon-background { background-color: #7d0000; }
+.navy { color: #000060; }
+.navy-background { background-color: #00007d; }
+.olive { color: #606000; }
+.olive-background { background-color: #7d7d00; }
+.purple { color: #600060; }
+.purple-background { background-color: #7d007d; }
+.red { color: #bf0000; }
+.red-background { background-color: #fa0000; }
+.silver { color: #909090; }
+.silver-background { background-color: #bcbcbc; }
+.teal { color: #006060; }
+.teal-background { background-color: #007d7d; }
+.white { color: #bfbfbf; }
+.white-background { background-color: #fafafa; }
+.yellow { color: #bfbf00; }
+.yellow-background { background-color: #fafa00; }
+span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
+.admonitionblock td.icon [class^="icon-"]:before { font-size: 2.5em; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); cursor: default; }
+.admonitionblock td.icon .icon-note:before { content: "\f05a"; color: #005498; color: #003f72; }
+.admonitionblock td.icon .icon-tip:before { content: "\f0eb"; text-shadow: 1px 1px 2px rgba(155, 155, 0, 0.8); color: #111; }
+.admonitionblock td.icon .icon-warning:before { content: "\f071"; color: #bf6900; }
+.admonitionblock td.icon .icon-caution:before { content: "\f06d"; color: #bf3400; }
+.admonitionblock td.icon .icon-important:before { content: "\f06a"; color: #bf0000; }
+.conum { display: inline-block; color: white !important; background-color: #222222; -webkit-border-radius: 100px; border-radius: 100px; text-align: center; width: 20px; height: 20px; font-size: 12px; font-weight: bold; line-height: 20px; font-family: Arial, sans-serif; font-style: normal; position: relative; top: -2px; letter-spacing: -1px; }
+.conum * { color: white !important; }
+.conum + b { display: none; }
+.conum:after { content: attr(data-value); }
+.conum:not([data-value]):empty { display: none; }
+.literalblock > .content > pre, .listingblock > .content > pre { -webkit-border-radius: 0; border-radius: 0; }
+
+</style>
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css">
+</head>
+<body class="book toc2 toc-left">
+<div id="header">
+<h1><span class="image"><img src="images\fırat_uni.png" width="100" height="100" alt="arc42">
+  </span>Test Otomasyon Sistemi</h1>
+
+  
+<div id="toc" class="toc2">
+<div id="toctitle">İçindekiler</div>
+<ul class="sectlevel1">
+<li><a href="#section-introduction-and-goals">1. Giriş ve Hedefler</a></li>
+<li>
+<ul class="sectlevel2">
+<li><a href="#_requirements_overview">1.1. Gereksinimlere Genel Bakış</a></li>
+<li><a href="#_quality_goals">1.2. Kalite Hedefleri</a></li>
+<li><a href="#_stakeholders">1.3. Paydaşlar</a></li>
+</ul>
+</li>
+<li><a href="#section-architecture-constraints">2. Mimari Kısıtlamalar</a></li>
+<li><a href="#section-context-and-scope">3. Sistem Kapsamı ve Bağlamı</a></li>
+<li>
+<ul class="sectlevel2">
+<li><a href="#_business_context">3.1. İş Bağlamı</a></li>
+<li><a href="#_technical_context">3.2. Teknik Bağlam</a></li>
+</ul>
+</li>
+<li><a href="#section-solution-strategy">4. Çözüm Stratejisi</a></li>
+<li><a href="#section-building-block-view">5.  Yapısal Blok Görünümü</a></li>
+<li>
+<ul class="sectlevel2">
+<li><a href="#_whitebox_overall_system">5.1. Beyaz Kutu Genel Sistemi</a></li>
+<li><a href="#_level_2">5.2. Level 2</a></li>
+<li><a href="#_level_3">5.3. Level 3</a></li>
+</ul>
+</li>
+<li><a href="#section-runtime-view">6. Çalışma Zamanı Görünümü</a></li>
+<li>
+<ul class="sectlevel2">
+<li><a href="#__runtime_scenario_1">6.1. &lt;Test Senaryosu Oluşturma Akışı&gt;</a></li>
+<li><a href="#__runtime_scenario_2">6.2. &lt;Test Yürütme Akışı&gt;</a></li>
+<li><a href="#_">6.3. &lt;Bilgi Grafiği Senkronizasyonu&gt;</li>
+</ul>
+</li>
+<li><a href="#section-deployment-view">7. Dağıtım Görünümü</a></li>
+<li>
+<ul class="sectlevel2">
+<li><a href="#_infrastructure_level_1">7.1. Üretim Ortamı</a></li>
+</ul>
+</li>
+<li><a href="#section-concepts">8. Kesintisiz Kavramlar</a></li>
+<li>
+<ul class="sectlevel2">
+<li><a href="#__em_concept_1_em">8.1. <em>&lt;Konsept 1&gt;</em></a></li>
+<li><a href="#__em_concept_2_em">8.2. <em>&lt;Konsept 2&gt;</em></a></li>
+<li><a href="#__em_concept_3_em">8.3. <em>&lt;Konsept 3&gt;</em></a></li>
+<li><a href="#__em_concept_4_em">8.3. <em>&lt;Konsept 4&gt;</em></a></li>
+</ul>
+</li>
+<li><a href="#section-design-decisions">9. Mimari Kararlar</a></li>
+<li><a href="#section-quality-scenarios">10. Kalite Gereksinimleri</a></li>
+<li>
+<ul class="sectlevel2">
+<li><a href="#_quality_tree">10.1. Kalite Ağacı</a></li>
+<li><a href="#_quality_scenarios">10.2. Kalite Senaryoları</a></li>
+</ul>
+</li>
+<li><a href="#section-technical-risks">11. Riskler ve Teknik Borçlar</a></li>
+<li><a href="#section-glossary">12. Sözlük</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<style>
+.arc42help {font-size:small; width: 14px; height: 16px; overflow: hidden; position: absolute; right: 0; padding: 2px 0 3px 2px;}
+.arc42help::before {content: "?";}
+.arc42help:hover {width:auto; height: auto; z-index: 100; padding: 10px;}
+.arc42help:hover::before {content: "";}
+@media print {
+	.arc42help {display:none;}
+}
+</style>
+
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="section-introduction-and-goals"><a class="anchor" href="#section-introduction-and-goals"></a>1. Giriş ve Hedefler</h2>
+<div class="sectionbody">
+  <p>Bir Test Otomasyon Sistemi olan PromptQA, yazılım test süreçlerini hızlandırmak ve kalite güvencesini artırmak amacıyla geliştirilen,
+    yapay zeka destekli bir çözümdür. Sistem, doğal dil işleme (NLP) ve knowledge graph teknolojilerini bir araya getirerek,
+    test mühendislerinin metinsel ifadelerle tanımladığı senaryoları otomatik olarak çalıştırılabilir test koduna dönüştürür.
+    Bu yaklaşım, manuel test yazım sürecini büyük ölçüde azaltırken, aynı zamanda tutarlılık ve kapsamlı test süreci oluşturmayı sağlar.
+    Özellikle karmaşık iş akışlarının hızlı bir şekilde test edilmesi gereken kurumsal uygulamalarda, sistemin sağladığı otomasyon
+    yetenekleri kritik bir verimlilik avantajı sunar.</p>
+  <p>Projenin temel hedefi, test uzmanlarının ihtiyaç duyduğu teknik detayları soyutlayarak, doğal dilde ifade edilen test senaryolarını
+    anında çalıştırılabilir otomasyon koduna çeviren akıllı bir araç geliştirmektir. Kullanıcılar, "Kasa Kartı Sayfasında yeni bir kayıt
+    oluştur" gibi basit bir talimatla başlattıkları süreç sonunda, sistem tarafından üretilen Gherkin senaryolarını ve bunlara karşılık
+    gelen Python tabanlı Browser-Use test kodlarını otomatik olarak elde eder. Bu süreç, geleneksel yöntemlerde saatler alan test senaryosu
+    tasarımı ve implementasyonunu saniyeler mertebesine indirger.</p>
+    <p>Sistemin teknik hedefleri arasında, Neo4j knowledge graph ile modellenmiş uygulama bileşenlerinin dinamik olarak sorgulanması,
+    LangChain ile bağlam-aware prompt optimizasyonu, ve GPT-4 gibi büyük dil modellerinin ürettiği çıktıların davranış tabanlı test
+    koduna (Behave) dönüştürülmesi yer alır. Arayüz katmanında ise Visual Studio Extension olarak entegre edilen çözüm, test mühendislerinin
+    mevcut geliştirme ortamlarından kopmadan otomasyon oluşturmasına olanak tanır. Performans açısından, her bir test senaryosunun sadece bir
+    kaç dakika içinde tamamlanması ve üretilen kodun %95'ten fazla doğruluk oranına sahip olması hedeflenir.</p>
+    <p>Nihai amaç, yazılım yaşam döngüsündeki test aşamasını "self-service" bir modele dönüştürerek, QA ekiplerinin regression testleri,
+    smoke testleri ve hatta karmaşık entegrasyon senaryolarını minimum insan müdahalesiyle yönetebilmesini sağlamaktır. Sistem, özellikle
+    sık sık güncellenen ERP, CRM gibi kurumsal uygulamalarda, test süreçlerinin sürdürülebilirliğini ve ölçeklenebilirliğini artıracak
+    şekilde tasarlanmıştır.</p>
+    <div class="image-gallery">
+      <p>
+        <a href="images/SequenceDiagram.png" data-lightbox="test-architecture" data-title="Test Otomasyon Sistemi - Sequence Diagram">
+          <img src="images/SequenceDiagram.png" alt="Sequence Diagram" class="thumbnail">
+        </a>
+      </p>
+      <p>
+        <a href="images/UseCaseDiagram.png" data-lightbox="test-architecture" data-title="Test Otomasyon Sistemi - Use Case Diagram">
+          <img src="images/UseCaseDiagram.png" alt="Use Case Diagram" class="thumbnail">
+        </a>
+      </p>
+      <p>
+        <a href="images/UserStoryDiagram.png" data-lightbox="test-architecture" data-title="Test Otomasyon Sistemi - User Story Diagram">
+          <img src="images/UserStoryDiagram.png" alt="User Story Diagram" class="thumbnail">
+        </a>
+      </p>
+      <p>
+        <a href="images\flow.png" data-lightbox="test-architecture" data-title="Test Otomasyon Sistemi - Akış Diagram">
+          <img src="images\flow.png" alt="Flow Diagram" class="thumbnail">
+        </a>
+      </p>
+    </div>
+    
+    <!-- Lightbox için gerekli CSS ve JS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    
+    <style>
+      .thumbnail {
+        max-width: 900px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        transition: transform 0.3s;
+      }
+      .thumbnail:hover {
+        transform: scale(1.02);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        cursor: pointer;
+      }
+    </style>
+
+
+    <div class="sect2">
+      <h3 id="_requirements_overview"><a class="anchor" href="#_requirements_overview"></a>1.1. Gereksinimlere Genel Bakış</h3>
+      <div class="paragraph">
+        <div class="paragraph">
+          <p>PromptQA Test Otomasyon Sistemi, modern yazılım geliştirme süreçlerindeki test otomasyon ihtiyaçlarını yenilikçi bir yaklaşımla ele alan kapsamlı bir çözümdür. Sistemin temel gereksinimleri, geleneksel test yöntemlerinin ötesine geçerek <strong>yapay zeka destekli test senaryosu üretimi</strong> ve <strong>otomasyon süreçlerinin entegre optimizasyonu</strong> üzerine odaklanmıştır.</p>
+        
+          <p>Bu sistem, test mühendislerinin doğal dilde ifade ettikleri test senaryolarını <strong>otomatik olarak çalıştırılabilir test koduna</strong> dönüştüren bir mimari sunar. Temel olarak şu bileşenleri içerir:</p>
+          
+          <ul>
+            <li><strong>Doğal Dil İşleme (NLP) Motoru:</strong> Kullanıcı girdilerini yapısal test senaryolarına dönüştürür</li>
+            <li><strong>Knowledge Graph (Bilgi Grafiği) Entegrasyonu:</strong> Uygulama bileşenlerinin ilişkilerini modelleyerek bağlam-aware test üretimi sağlar</li>
+            <li><strong>Akıllı Kod Üreteci:</strong> Gherkin formatındaki senaryoları otomatik olarak Python/Behave koduna çevirir</li>
+          </ul>
+        
+          <p>Sistemin tasarımı, özellikle <strong>sık release alan kurumsal uygulamalarda</strong> test süreçlerini hızlandırmak üzere optimize edilmiştir. Kullanıcılar, karmaşık teknik detaylarla uğraşmadan, günlük dilde yazdıkları test senaryolarını <strong>dakikalar içinde</strong> otomatik olarak çalıştırılabilir hale getirebilirler.</p>
+        
+          <p>PromptQA'nın temel farklılaştırıcı özelliği, <strong>test otomasyonunu demokratikleştirme</strong> vizyonuyla hareket ederek, QA ekiplerinin üretkenliğini önemli ölçüde artırmasıdır. Sistem, test süreçlerindeki manuel eforu %70'e varan oranlarda azaltmayı hedeflerken, aynı zamanda test kapsamını genişleterek yazılım kalitesinin artırılmasını sağlar.</p>
+        </div>
+      </div>
+      <div class="image-gallery">
+        <p>
+          <a href="images\traceabilityMatrix.png" data-lightbox="test-architecture" data-title="Test Otomasyon Sistemi - Gereksinim İzlenilebilirlik Matrisi">
+            <img src="images\traceabilityMatrix.png" alt="Traceability Matrix Diagram" class="thumbnail">
+          </a>
+        </p>
+        <p>
+          <a href="images\requirement.png" data-lightbox="test-architecture" data-title="Test Otomasyon Sistemi - Gereksinim Kategorileri ve Örnekler">
+            <img src="images\requirement.png" alt="Requirements Diagram" class="thumbnail">
+          </a>
+        </p>
+      </div>
+
+<div class="sect2">
+  <h3 id="_quality_goals"><a class="anchor" href="#_quality_goals"></a>1.2. Kalite Hedefleri</h3>
+  <div class="sectionbody">
+    <div class="paragraph">
+      <p> Test Otomasyon Sistemi'nin kalite hedefleri, yazılım test süreçlerinin etkinliğini ve sürdürülebilirliğini
+         sağlamak amacıyla, temel yazılım mühendisliği ilkeleri doğrultusunda yapılandırılmıştır. Bu hedefler; güvenilirlik,
+          ölçeklenebilirlik ve kullanılabilirlik başta olmak üzere, sistemin uzun vadeli başarısını ve paydaş memnuniyetini
+           doğrudan etkileyen kalite metriklerine odaklanır.</p>
+    </div>
+
+    <div class="paragraph">
+      <p><strong>Temel Kalite Hedefleri:</strong></p>
+    </div>
+
+    <div class="ulist">
+      <ul class="quality-goals">
+        <li class="goal-item">
+          <p><span class="icon"><i class="fa fa-check-circle"></i></span> <strong class="goal-title">Doğruluk (Accuracy):</strong> 
+            Test Otomasyon Sistemi’nin, farklı test senaryoları ve sistem koşulları altında tutarlı, doğru ve hatasız sonuçlar üretebilmesi
+             temel güvenilirlik hedefidir. Bu kapsamda sistemin beklenmeyen durumlarla karşılaştığında kararlı davranması, test sonuçlarının
+              tekrar edilebilir olması ve kritik hatalara karşı toleranslı olması sağlanacaktır.
+          Üretilen test senaryolarının ve otomasyon kodunun minimum <strong>%95 doğruluk</strong> oranına sahip olması hedeflenmektedir. Bu kapsamda:
+          <ul class="sub-items">
+            <li>Gherkin senaryolarının iş kurallarıyla %100 uyumlu olması</li>
+            <li>Üretilen Python kodunun fonksiyonel doğruluğunun unittest'lerle validasyonu</li>
+            <li>Yanlış pozitif/negatif oranının %5'i geçmemesi</li>
+          </ul>
+          </p>
+        </li>
+      
+        <li class="goal-item">
+          <p><span class="icon"><i class="fa fa-bolt"></i></span> <strong class="goal-title">Performans (Performance):</strong> 
+            Test Otomasyon Sistemi’nin yüksek performans hedefleri, kullanıcı deneyimini kesintisiz ve verimli hale getirmek adına
+             belirlenmiştir. Sistemin işlevlerini hızlı ve tutarlı şekilde yerine getirebilmesi, özellikle yoğun kullanım senaryolarında
+              kritik öneme sahiptir.
+          Sistemin aşağıdaki performans kriterlerini sağlaması beklenmektedir:
+          <ul class="sub-items">
+            <li>Kullanıcı talebinin alınmasından çalıştırılabilir kod üretimine kadar olan sürecin <strong>2 dakikayı</strong> aşmaması</li>
+            <li>Eşzamanlı 50+ kullanıcı talebini işleyebilme kapasitesi</li>
+            <li>Neo4j sorgularının 500ms içinde tamamlanması</li>
+            <li>LLM çağrılarının timeout süresinin 30s ile sınırlandırılması</li>
+          </ul>
+          </p>
+        </li>
+      
+        <li class="goal-item">
+          <p><span class="icon"><i class="fa fa-shield-alt"></i></span> <strong class="goal-title">Güvenilirlik (Reliability):</strong> 
+            Sistem, kesintisiz çalışmayı garanti ederek kullanıcılara her zaman erişilebilir ve hatalara karşı dayanıklı bir hizmet sunmalıdır.
+             Bu, özellikle kritik uygulamalarda test süreçlerinin aksamadan ilerlemesini sağlar. Sistemin kesintisiz hizmet sunma hedefleri:
+          <ul class="sub-items">
+            <li><strong>%99.5 uptime</strong> SLA garantisi (aylık maksimum 3.6 saat bakım dahil)</li>
+            <li>Kritik hatalarda 1 saat içinde otomatik rollback mekanizması</li>
+            <li>Veri kaybı olmadan disaster recovery (maksimum 5 dakika RTO)</li>
+            <li>Haftalık yedekleme ve encryption desteği</li>
+          </ul>
+          </p>
+        </li>
+      
+        <li class="goal-item">
+          <p><span class="icon"><i class="fa fa-leaf"></i></span> <strong class="goal-title">Sürdürülebilirlik (Maintainability):</strong>
+            Sistemin uzun vadede sürdürülebilir ve kolay geliştirilebilir olması, hem teknik borcu azaltmak hem de değişen ihtiyaçlara hızlıca uyum
+             sağlamak açısından büyük önem taşır.
+          Sistemin uzun vadede geliştirilebilirliği için:
+          <ul class="sub-items">
+            <li>Modüler mimari ile bileşen bağımlılıklarının minimize edilmesi</li>
+            <li>Kod karmaşıklığının (cyclomatic complexity) 10'un altında tutulması</li>
+            <li>Tam dokümante edilmiş API'ler ve Swagger entegrasyonu</li>
+            <li>Yıllık teknik borç oranının %5'i geçmemesi</li>
+          </ul>
+          </p>
+        </li>
+      
+        <li class="goal-item">
+          <p><span class="icon"><i class="fa fa-universal-access"></i></span> <strong class="goal-title">Erişilebilirlik (Accessibility):</strong>
+            Sistem, farklı engel gruplarına ve kullanıcı deneyimi gereksinimlerine sahip bireyler için de erişilebilir olmalıdır. Bu yaklaşım,
+             kapsayıcılığı artırır ve kamu kurumları ya da geniş kullanıcı tabanına hitap eden sistemler için kritik bir gerekliliktir.
+          Kapsayıcı kullanım deneyimi için:
+          <ul class="sub-items">
+            <li>Ekran okuyucu desteği ve klavye navigasyonu</li>
+            <li>Renk kontrast oranının minimum 4.5:1 sağlanması</li>
+            <li>Yerelleştirme desteği (en az 5 dil)</li>
+          </ul>
+          </p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="paragraph">
+      <p><strong>Teknik Kalite Özellikleri:</strong></p>
+    </div>
+
+    <div class="ulist">
+      <ul>
+        <li>
+          <p><span class="icon"><i class="fa fa-code"></i></span> <strong>Kod Kalitesi:</strong> Üretilen Python kodunun PEP-8 standartlarına uygunluğu ve <strong>minimum cyclomatic complexity</strong> değeri</p>
+        </li>
+        <li>
+          <p><span class="icon"><i class="fa fa-exchange-alt"></i></span> <strong>Entegrasyon Yeteneği:</strong> CI/CD pipeline'ları (Jenkins, GitLab CI) ile sorunsuz entegrasyon</p>
+        </li>
+        <li>
+          <p><span class="icon"><i class="fa fa-user-friends"></i></span> <strong>Kullanıcı Deneyimi:</strong> VS Code eklentisi arayüzünde <strong>90+ System Usability Scale (SUS)</strong> puanı hedefi</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="paragraph">
+      <p>Bu hedefler, ISO 25010 yazılım kalite modeli referans alınarak oluşturulmuştur. Kalite metriklere düzenli olarak <strong>SonarQube</strong> ve <strong>Prometheus</strong> ile izlenerek raporlanır.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="sect2">
+  <h3 id="_stakeholders"><a class="anchor" href="#_stakeholders"></a>1.3. Paydaşlar</h3>
+  <table class="tableblock frame-all grid-all" style="width:100%;">
+  <colgroup>
+  <col style="width:20%;">
+  <col style="width:40%;">
+  <col style="width:40%;"> 
+  </colgroup>
+  <thead>
+  <tr>
+  <th class="tableblock halign-left valign-top">Rol/İsim</th>
+  <th class="tableblock halign-left valign-top">İletişim</th>
+  <th class="tableblock halign-left valign-top">Beklentiler</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sami Tuğal</strong><br><em>(Software Architect and Team Leader)</em></p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">sami.tugal@logo.com.tr<br>+90 534 220 76 56</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">• Proje yönetimi ve teknik liderlik<br>• Kod kalitesinin sağlanması<br>• Sprint hedeflerinin takibi</p></td>
+  </tr>
+  
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Prof. Dr. Resul Daş</strong><br><em>(Academic Leader)</em></p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">rdas@firat.edu.tr<br></p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">• Akademik standartlara uyum<br>• Yenilikçi teknik yaklaşımlar<br>• Araştırma çıktılarının yönetimi</p></td>
+  </tr>
+  
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Batuhan Bayır</strong><br><em>(Software Developer)</em></p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">210541079@firat.edu.tr<br>+90 555 345 6789</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">• Backend servislerin geliştirilmesi<br>• API entegrasyonları<br>• Performans optimizasyonu</p></td>
+  </tr>
+  
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Enes Güzel</strong><br><em>(Software Developer)</em></p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">205541030@firat.edu.tr<br>+90 536 436 2277</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">• Frontend arayüz geliştirme<br>• Kullanıcı deneyimi iyileştirmeleri<br>• Test otomasyon arayüzü</p></td>
+  </tr>
+  
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Mustafa Tortuk</strong><br><em>(Software Developer)</em></p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">220541114@firat.edu.tr<br>+90 542 783 6952</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">• Veritabanı yönetimi<br>• Bilgi grafiği optimizasyonu<br>• Test veri setlerinin oluşturulması</p></td>
+  </tr>
+  </tbody>
+  </table>
+</div>
+
+
+
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+  <h2 id="section-architecture-constraints"><a class="anchor" href="#section-architecture-constraints"></a>2.  Mimari Kısıtlamalar</h2>
+  <div class="sectionbody">
+    <table class="tableblock frame-all grid-all" style="width:100%;">
+      <colgroup>
+        <col style="width:30%;">
+        <col style="width:70%;">
+      </colgroup>
+      <thead>
+        <tr>
+          <th class="tableblock halign-left valign-top">Kısıtlama</th>
+          <th class="tableblock halign-left valign-top">Açıklama</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Platform Bağımsızlığı</strong></p></td>
+          <td class="tableblock halign-left valign-top">
+            <p class="tableblock">Sistem Visual Studio Code eklentisi olarak geliştirilecek ve Windows/macOS/Linux platformlarında çalışacaktır. Tarayıcı tabanlı arayüzler Chrome 100+ ve Edge 100+ versiyonlarını destekleyecektir.</p>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Yapay Zeka Entegrasyonu</strong></p></td>
+          <td class="tableblock halign-left valign-top">
+            <p class="tableblock">Doğal dil işleme için OpenAI GPT-4 API kullanılacak, prompt engineering süreçleri LangChain framework'ü ile yönetilecektir. API çağrıları için timeout süresi 30sn ile sınırlandırılacaktır.</p>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Veri Yönetimi</strong></p></td>
+          <td class="tableblock halign-left valign-top">
+            <p class="tableblock">Uygulama bileşenleri Neo4j Knowledge Graph'da modellenecek, Cypher sorgu dili kullanılacaktır. Test verileri için PostgreSQL 14+ veritabanı kullanılacak ve tüm veri transferleri AES-256 ile şifrelenecektir.</p>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kod Üretim Standardı</strong></p></td>
+          <td class="tableblock halign-left valign-top">
+            <p class="tableblock">Üretilen Python kodları PEP-8 standartlarına uygun olacak, Behave framework için optimize edilecektir. Kod başına cyclomatic complexity 10'un altında tutulacak ve %85+ unit test kapsamı hedeflenecektir.</p>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Performans Hedefleri</strong></p></td>
+          <td class="tableblock halign-left valign-top">
+            <p class="tableblock">Kullanıcı talebinin alınmasından çalıştırılabilir kod üretimine kadar olan süreç 2 dakikayı aşmayacaktır. Eşzamanlı 50+ kullanıcı talebi işlenebilecek, Neo4j sorguları 500ms içinde tamamlanacaktır.</p>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Entegrasyonlar</strong></p></td>
+          <td class="tableblock halign-left valign-top">
+            <p class="tableblock">Jenkins/GitLab CI ile CI/CD pipeline entegrasyonu zorunludur. JIRA ve Confluence için REST API bağlantıları sağlanacak, tüm entegrasyonlar OAuth 2.0 ile güvenli hale getirilecektir.</p>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Güvenlik</strong></p></td>
+          <td class="tableblock halign-left valign-top">
+            <p class="tableblock">Tüm API çağrıları JWT token ile korunacak, kullanıcı verileri GDPR uyumlu şekilde saklanacaktır. Pentest raporlarına göre high/critical seviye güvenlik açıklarına 48 saat içinde çözüm üretilecektir.</p>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sürüm Politikası</strong></p></td>
+          <td class="tableblock halign-left valign-top">
+            <p class="tableblock">2 haftalık sprintler halinde geliştirme yapılacak, Semantic Versioning (MAJOR.MINOR.PATCH) kullanılacaktır. Major versiyonlar için en az 2 haftalık beta test dönemi zorunludur.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="page-break-after: always;"></div>
+  </div>
+</div>
+
+
+<div class="sect1">
+  <h2 id="section-context-and-scope"><a class="anchor" href="#section-context-and-scope"></a>3. Sistem Kapsamı ve Bağlamı</h2>
+  <div class="sectionbody">  
+    
+    <div class="sect2">
+      <h3 id="_business_context"><a class="anchor" href="#_business_context"></a>3.1. İş Bağlamı</h3>
+      
+      <div class="imageblock">
+
+        <div class="image-gallery">
+          <p>
+            <a href="images\businessContext.png" data-lightbox="test-architecture" data-title="Test Otomasyon Sistemi - İş Bağlamı Diagramı">
+              <img src="images\businessContext.png" alt="Business Context Diagram" class="thumbnail">
+            </a>
+          </p>
+        </div>
+
+
+        <div class="title">Figure 1. İş Bağlamı</div>
+      </div>
+
+      <div class="paragraph">
+        <p>Sistem, kurumsal yazılım geliştirme süreçlerindeki <strong>test otomasyonu darboğazlarını</strong> çözmek üzere tasarlanmıştır. Temel iş değeri önermeleri:</p>
+      </div>
+
+      <table class="tableblock frame-all grid-all" style="width:100%;">
+        <colgroup>
+          <col style="width:20%;">
+          <col style="width:40%;">
+          <col style="width:40%;">
+        </colgroup>
+        <thead>
+          <tr>
+            <th class="tableblock halign-left valign-top">Paydaş</th>
+            <th class="tableblock halign-left valign-top">İş İhtiyacı</th>
+            <th class="tableblock halign-left valign-top">Çözüm Sağladığımız Alan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>QA Ekipleri</strong></p></td>
+            <td class="tableblock halign-left valign-top"><p class="tableblock">• Manuel test yazım süresinin kısaltılması<br>• Test kapsamının genişletilmesi</p></td>
+            <td class="tableblock halign-left valign-top"><p class="tableblock">• Doğal dilden otomatik test kodu üretimi<br>• Bilgi grafiği ile bağlam-aware senaryolar</p></td>
+          </tr>
+          <tr>
+            <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>DevOps</strong></p></td>
+            <td class="tableblock halign-left valign-top"><p class="tableblock">• CI/CD pipeline verimliliği<br>• Test sürelerinin kısaltılması</p></td>
+            <td class="tableblock halign-left valign-top"><p class="tableblock">• Jenkins/GitLab entegrasyonu<br>• Paralel test yürütme desteği</p></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="paragraph">
+        <p><strong>Harici Sistem Entegrasyonları:</strong></p>
+        <ul>
+          <li><strong>JIRA:</strong> Test senaryolarının otomatik olarak issue'ya dönüştürülmesi</li>
+          <li><strong>Confluence:</strong> Otomatik test dokümantasyonu oluşturma</li>
+          <li><strong>Slack:</strong> Test sonuçlarının gerçek zamanlı bildirimi</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sect2">
+      <h3 id="_technical_context"><a class="anchor" href="#_technical_context"></a>3.2. Teknik Bağlam</h3>
+
+      <div class="imageblock">
+
+        <div class="image-gallery">
+          <p>
+            <a href="images\technicalContext.png" data-lightbox="test-architecture" data-title="Test Otomasyon Sistemi - Teknik Bağlam Diagramı">
+              <img src="images\technicalContext.png" alt="Technical Context Diagram" class="thumbnail">
+            </a>
+          </p>
+        </div>
+
+
+        <div class="title">Figure 2. Teknik Sistem Bağlamı</div>
+      </div>
+
+      <table class="tableblock frame-all grid-all" style="width:100%;">
+        <colgroup>
+          <col style="width:30%;">
+          <col style="width:70%;">
+        </colgroup>
+        <thead>
+          <tr>
+            <th class="tableblock halign-left valign-top">Bileşen</th>
+            <th class="tableblock halign-left valign-top">Teknik Detaylar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>VS Code Extension</strong></p></td>
+            <td class="tableblock halign-left valign-top">
+              <p class="tableblock">• TypeScript 4.9+<br>• Webview API ile interaktif arayüz<br>• LSP protokolü ile kod tamamlama</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LangChain Servisi</strong></p></td>
+            <td class="tableblock halign-left valign-top">
+              <p class="tableblock">• Python 3.10+<br>• GPT-4 API entegrasyonu<br>• Prompt versioning sistemi</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Knowledge Graph</strong></p></td>
+            <td class="tableblock halign-left valign-top">
+              <p class="tableblock">• Neo4j 5.x<br>• Cypher sorgu optimizasyonu<br>• Şema versiyonlama mekanizması</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="paragraph">
+        <p><strong>Girdi/Çıktı Kanalları:</strong></p>
+        <table class="tableblock frame-all grid-all" style="width:100%;">
+          <colgroup>
+            <col style="width:25%;">
+            <col style="width:25%;">
+            <col style="width:25%;">
+            <col style="width:25%;">
+          </colgroup>
+          <thead>
+            <tr>
+              <th class="tableblock halign-left valign-top">Kanal Türü</th>
+              <th class="tableblock halign-left valign-top">Girdi</th>
+              <th class="tableblock halign-left valign-top">İşlem</th>
+              <th class="tableblock halign-left valign-top">Çıktı</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kullanıcı Etkileşimi</strong></p></td>
+              <td class="tableblock halign-left valign-top"><p class="tableblock">Doğal dilde test senaryosu</p></td>
+              <td class="tableblock halign-left valign-top"><p class="tableblock">NLP işleme ve bağlam zenginleştirme</p></td>
+              <td class="tableblock halign-left valign-top"><p class="tableblock">Gherkin senaryoları</p></td>
+            </tr>
+            <tr>
+              <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sistem Entegrasyonu</strong></p></td>
+              <td class="tableblock halign-left valign-top"><p class="tableblock">API çağrıları (REST/GraphQL)</p></td>
+              <td class="tableblock halign-left valign-top"><p class="tableblock">Veri doğrulama ve transformasyon</p></td>
+              <td class="tableblock halign-left valign-top"><p class="tableblock">Python test kodu</p></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div style="page-break-after: always;"></div>
+    </div>
+  </div>
+</div>
+
+
+<div class="sect1">
+  <h2 id="section-solution-strategy"><a class="anchor" href="#section-solution-strategy"></a>4. Çözüm Stratejisi</h2>
+  <div class="sectionbody">
+    
+    <div class="paragraph">
+      <p>Sistemin çözüm stratejisi, <strong>yapay zeka destekli test otomasyonu</strong> ile <strong>geleneksel QA süreçlerini</strong> birleştiren yenilikçi bir yaklaşım benimsemektedir. Sistemin temel çözüm prensipleri:</p>
+    </div>
+
+    <div class="sect2">
+      <h3 id="_technical_strategy"><a class="anchor" href="#_technical_strategy"></a>4.1. Teknik Strateji</h3>
+      
+      <div class="ulist">
+        <ul>
+          <li>
+            <p><strong>Doğal Dil İşleme Pipeline'ı:</strong></p>
+            <div class="ulist">
+              <ul>
+                <li><p>Kullanıcı girdilerinin <strong>LangChain</strong> ile yapısal hale getirilmesi</p></li>
+                <li><p>GPT-4 modelinin <strong>dynamic few-shot learning</strong> ile eğitilmesi</p></li>
+                <li><p>Domain-specific prompt şablonlarının version kontrolü</p></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <p><strong>Bilgi Grafiği Entegrasyonu:</strong></p>
+            <div class="ulist">
+              <ul>
+                <li><p>Uygulama bileşenlerinin <strong>Neo4j</strong>'de modellenmesi</p></li>
+                <li><p>Cypher sorgularının <strong>semantik cache</strong> ile optimize edilmesi</p></li>
+                <li><p>Şema evrim yönetimi için <strong>migration script'leri</strong></p></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="imageblock">
+
+
+        <div class="image-gallery">
+          <p>
+            <a href="images\technicalSolution.png" data-lightbox="test-architecture" data-title="Test Otomasyon Sistemi - Teknik Çözüm Stratejisi">
+              <img src="images\technicalSolution.png" alt="Technical Solution Diagram" class="thumbnail">
+            </a>
+          </p>
+        </div>
+
+
+        <div class="title">Figure 3. Teknik Çözüm Mimarisi</div>
+      </div>
+    </div>
+
+    <div class="sect2">
+      <h3 id="_business_strategy"><a class="anchor" href="#_business_strategy"></a>4.2. İş Stratejisi</h3>
+      
+      <table class="tableblock frame-all grid-all" style="width:100%;">
+        <colgroup>
+          <col style="width:30%;">
+          <col style="width:70%;">
+        </colgroup>
+        <thead>
+          <tr>
+            <th class="tableblock halign-left valign-top">Strateji</th>
+            <th class="tableblock halign-left valign-top">Uygulama</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Time-to-Market Hızlandırma</strong></p></td>
+            <td class="tableblock halign-left valign-top">
+              <p class="tableblock">• Test senaryosu oluşturma süresinde %70 azalma<br>
+              • Regression test sürelerinin 4 saatten 30 dakikaya düşürülmesi</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Maliyet Optimizasyonu</strong></p></td>
+            <td class="tableblock halign-left valign-top">
+              <p class="tableblock">• Manuel test eforunda %60 tasarruf<br>
+              • CI/CD pipeline'larında resource kullanımının %40 azaltılması</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sect2">
+      <h3 id="_implementation_roadmap"><a class="anchor" href="#_implementation_roadmap"></a>4.3. Uygulama Yol Haritası</h3>
+      
+      <div class="olist arabic">
+        <ol class="arabic">
+          <li>
+            <p><strong>MVP Fazı (3 ay):</strong></p>
+            <div class="ulist">
+              <ul>
+                <li><p>Temel NLP pipeline'ının oluşturulması</p></li>
+                <li><p>VS Code eklentisinin prototipi</p></li>
+                <li><p>Behave kod üretecinin temel versiyonu</p></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <p><strong>Entegrasyon Fazı (2 ay):</strong></p>
+            <div class="ulist">
+              <ul>
+                <li><p>Neo4j bilgi grafiği entegrasyonu</p></li>
+                <li><p>JIRA ve Slack bağlantıları</p></li>
+                <li><p>Performans optimizasyonları</p></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <p><strong>Ölçeklenebilirlik Fazı (1.5 ay):</strong></p>
+            <div class="ulist">
+              <ul>
+                <li><p>Kubernetes cluster desteği</p></li>
+                <li><p>Multi-language desteği</p></li>
+                <li><p>Enterprise güvenlik özellikleri</p></li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <div style="page-break-after: always;"></div>
+  </div>
+</div>
+
+<div class="sect1">
+  <h2 id="section-building-block-view"><a class="anchor" href="#section-building-block-view"></a>5. Yapısal Blok Görünümü</h2>
+  <div class="sectionbody">
+    
+    <div class="sect2">
+      <h3 id="_whitebox_overall_system"><a class="anchor" href="#_whitebox_overall_system"></a>5.1. Beyaz Kutu Genel Sistemi</h3>
+      
+      <div class="imageblock">
+
+        <div class="image-gallery">
+          <p>
+            <a href="images\systemOverview.png" data-lightbox="test-architecture" data-title="Test Otomasyon Sistemi - Sistem Görünümü">
+              <img src="images\systemOverview.png" alt="System Overview Diagram" class="thumbnail">
+            </a>
+          </p>
+        </div>
+
+        <div class="title">Figure 4. PromptQA High-Level Architecture</div>
+      </div>
+
+      <div class="dlist">
+        <dl>
+          <dt class="hdlist1">Motivation</dt>
+          <dd>
+            <p>Bu diyagram, sistemin temel bileşenlerini ve bunların etkileşimlerini anlamak için genel bir bakış sağlar. Mimari kararları ve teknoloji seçimlerini görselleştirir.</p>
+          </dd>
+          
+          <dt class="hdlist1">Contained Building Blocks</dt>
+          <dd>
+            <ol>
+              <li>VS Code Extension</li>
+              <li>API Gateway</li>
+              <li>Core Processing Engine</li>
+              <li>Knowledge Graph Service</li>
+              <li>AI Integration Layer</li>
+            </ol>
+          </dd>
+          
+          <dt class="hdlist1">Important Interfaces</dt>
+          <dd>
+            <ul>
+              <li>Extension-API: REST/JSON over HTTPS</li>
+              <li>API-Core: gRPC with Protocol Buffers</li>
+              <li>Core-Neo4j: Bolt Protocol</li>
+              <li>Core-AI: OpenAI API (REST)</li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+
+      <div class="sect3">
+        <h4 id="_vscode_extension"><a class="anchor" href="#_vscode_extension"></a>5.1.1. VS Code Eklentisi</h4>
+        <div class="paragraph">
+          <p><strong>Purpose/Responsibility:</strong> Kullanıcıların doğal dilde test senaryoları girebileceği ve sonuçları görselleştirebileceği arayüz katmanı.</p>
+        </div>
+        <div class="paragraph">
+          <p><strong>Interfaces:</strong></p>
+          <ul>
+            <li>Language Server Protocol (LSP)</li>
+            <li>REST API for backend communication</li>
+          </ul>
+        </div>
+        <div class="paragraph">
+          <p><strong>Quality Characteristics:</strong></p>
+          <ul>
+            <li>Response time < 500ms for UI operations</li>
+            <li>Supports 100+ concurrent users</li>
+          </ul>
+        </div>
+        <div class="paragraph">
+          <p><strong>Location:</strong> <code>frontend/vscode-extension/</code></p>
+        </div>
+      </div>
+
+      <div class="sect3">
+        <h4 id="_core_processing_engine"><a class="anchor" href="#_core_processing_engine"></a>5.1.2.Ana İşlem Motoru</h4>
+        <div class="paragraph">
+          <p><strong>Purpose/Responsibility:</strong> Test senaryolarının işlenmesi ve otomasyon kodunun üretilmesinden sorumlu ana bileşen.</p>
+        </div>
+        <div class="paragraph">
+          <p><strong>Interfaces:</strong></p>
+          <ul>
+            <li>gRPC API for external communication</li>
+            <li>GraphQL for internal component communication</li>
+          </ul>
+        </div>
+        <div class="paragraph">
+          <p><strong>Quality Characteristics:</strong></p>
+          <ul>
+            <li>Processes 50+ requests per second</li>
+            <li>99.9% availability during business hours</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="sect2">
+      <h3 id="_level_2"><a class="anchor" href="#_level_2"></a>5.2. Level 2 - Ana İşlem Ayrıntıları</h3>
+      
+      <div class="sect3">
+        <h4 id="_white_box_core_engine"><a class="anchor" href="#_white_box_core_engine"></a>5.2.1. Beyaz Kutu <em>Ana İşlem Motoru</em></h4>
+        
+        <div class="imageblock">
+          
+          <div class="image-gallery">
+            <p>
+              <a href="images\whiteboxView.png" data-lightbox="test-architecture" data-title="Test Otomasyon Sistemi - Beyaz Kutu Görünümü">
+                <img src="images\whiteboxView.png" alt="Whiteboxview Diagram" class="thumbnail">
+              </a>
+            </p>
+          </div>
+
+          <div class="title">Figure 5. Ana İşlemin Beyaz Kutu Görünümü</div>
+        </div>
+
+        <div class="paragraph">
+          <p><strong>Internal Components:</strong></p>
+          <ol>
+            <li><strong>Request Handler:</strong> Gelen istekleri yönlendirir ve validasyon yapar</li>
+            <li><strong>Scenario Generator:</strong> Doğal dil işleme pipeline'ını yönetir</li>
+            <li><strong>Code Transformer:</strong> Gherkin'i executable koda dönüştürür</li>
+            <li><strong>Integration Manager:</strong> Harici sistemlerle iletişimi sağlar</li>
+          </ol>
+        </div>
+
+        <div class="paragraph">
+          <p><strong>Critical Data Flows:</strong></p>
+          <ul>
+            <li>User request → Request Handler → Scenario Generator</li>
+            <li>Scenario Generator → Knowledge Graph → AI Service</li>
+            <li>Code Transformer → Integration Manager → CI/CD</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="sect2">
+      <h3 id="_level_3"><a class="anchor" href="#_level_3"></a>5.3. Level 3 - Scenario Generator Details</h3>
+      
+      <div class="sect3">
+        <h4 id="_white_box_scenario_generator"><a class="anchor" href="#_white_box_scenario_generator"></a>5.3.1. White Box <em>Scenario Generator</em></h4>
+        
+        <div class="paragraph">
+          <p><strong>Component Architecture:</strong></p>
+        </div>
+
+        <table class="tableblock frame-all grid-all" style="width:100%;">
+          <colgroup>
+            <col style="width:30%;">
+            <col style="width:70%;">
+          </colgroup>
+          <thead>
+            <tr>
+              <th class="tableblock halign-left valign-top">Sub-component</th>
+              <th class="tableblock halign-left valign-top">Responsibility</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NLP Preprocessor</strong></p></td>
+              <td class="tableblock halign-left valign-top"><p class="tableblock">Kullanıcı girdisini tokenize eder ve temizler</p></td>
+            </tr>
+            <tr>
+              <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Context Enricher</strong></p></td>
+              <td class="tableblock halign-left valign-top"><p class="tableblock">Knowledge Graph'dan bağlam bilgisi çeker</p></td>
+            </tr>
+            <tr>
+              <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Prompt Builder</strong></p></td>
+              <td class="tableblock halign-left valign-top"><p class="tableblock">LLM için optimize edilmiş prompt'lar oluşturur</p></td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+
+    <div style="page-break-after: always;"></div>
+  </div>
+</div>
+
+
+<div class="sect1">
+  <h2 id="section-runtime-view"><a class="anchor" href="#section-runtime-view"></a>6. Çalışma Zamanı Görünümü</h2>
+  <div class="sectionbody">
+    
+    <div class="sect2">
+      <h3 id="_test_scenario_creation"><a class="anchor" href="#_test_scenario_creation"></a>6.1. Test Senaryosu Oluşturma Akışı</h3>
+      
+      <div class="imageblock">
+
+       <div class="image-gallery">
+            <p>
+              <a href="images\runtime1.png" data-lightbox="test-architecture" data-title="Test Otomasyon Sistemi - ÇalışmaZamanı1">
+                <img src="images\runtime1.png" alt="Runtime1 Diagram" class="thumbnail">
+              </a>
+            </p>
+          </div>
+
+        <div class="title">Figure 6. Test Senaryosu Oluşturma Akışı</div>
+      </div>
+
+      <div class="paragraph">
+        <p><strong>Kritik Etkileşimler:</strong></p>
+        <ul>
+          <li>Kullanıcı girdisi VS Code eklentisi tarafından REST API'ye iletilir</li>
+          <li>Knowledge Graph'dan alınan bağlam bilgisi GPT-4 prompt'u ile birleştirilir</li>
+          <li>Oluşturulan Gherkin senaryosu kullanıcı arayüzüne geri döner</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sect2">
+      <h3 id="_test_execution_flow"><a class="anchor" href="#_test_execution_flow"></a>6.2. Test Yürütme Akışı</h3>
+      
+      <div class="imageblock">
+
+      <div class="image-gallery">
+            <p>
+              <a href="images\runtime2.png" data-lightbox="test-architecture" data-title="Test Otomasyon Sistemi - ÇalışmaZamanı2">
+                <img src="images\runtime2.png" alt="Runtime2 Diagram" class="thumbnail">
+              </a>
+            </p>
+          </div>
+
+        <div class="title">Figure 7. Test Yürütme Akışı</div>
+      </div>
+
+      <div class="paragraph">
+        <p><strong>Önemli Noktalar:</strong></p>
+        <ul>
+          <li>CI/CD pipeline'ı test yürütmeyi tetikler</li>
+          <li>Gherkin'den Python koduna dönüşüm işlemi</li>
+          <li>Behave framework'ü ile test sonuçlarının üretilmesi</li>
+          <li>JUnit formatında rapor oluşturma</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sect2">
+      <h3 id="_knowledge_graph_sync"><a class="anchor" href="#_knowledge_graph_sync"></a>6.3. Bilgi Grafiği Senkronizasyonu</h3>
+      
+      <div class="imageblock">
+
+        <div class="image-gallery">
+          <p>
+            <a href="images\runtime3.png" data-lightbox="test-architecture" data-title="Test Otomasyon Sistemi - ÇalışmaZamanı3">
+              <img src="images\runtime3.png" alt="Runtime3 Diagram" class="thumbnail">
+            </a>
+          </p>
+        </div>
+
+        <div class="title">Figure 8. Bilgi Grafiği Güncelleme Akışı</div>
+      </div>
+
+      <div class="paragraph">
+        <p><strong>Temel Özellikler:</strong></p>
+        <ul>
+          <li>Swagger/OpenAPI spesifikasyonlarından otomatik şema çıkarımı</li>
+          <li>Git versiyon kontrolü ile şema yönetimi</li>
+          <li>Neo4j'in transactional güncelleme mekanizması</li>
+        </ul>
+      </div>
+      
+      <div style="page-break-after: always;"></div>
+    </div>
+  </div>
+</div>
+
+<div class="sect1">
+  <h2 id="section-deployment-view"><a class="anchor" href="#section-deployment-view"></a>7. Dağıtım Görünümü</h2>
+  <div class="sectionbody">
+    
+    <div class="sect2">
+      <h3 id="_production_environment"><a class="anchor" href="#_production_environment"></a>7.1. Üretim Ortamı</h3>
+      
+      <div class="imageblock">
+
+       <div class="image-gallery">
+            <p>
+              <a href="images\deploymentView.png" data-lightbox="test-architecture" data-title="Test Otomasyon Sistemi - Yapısal Görünüm">
+                <img src="images\deploymentView.png" alt="DeploymentView Diagram" class="thumbnail">
+              </a>
+            </p>
+          </div>
+
+        <div class="title">Figure 9. Dağıtım Mimarisi</div>
+      </div>
+
+      <div class="dlist">
+        <dl>
+          <dt class="hdlist1">Motivation</dt>
+          <dd>
+            <p>Bu dağıtım mimarisi, yüksek erişilebilirlik ve ölçeklenebilirlik gereksinimlerini karşılamak üzere tasarlanmıştır. Bileşenlerin izole edilmiş ortamlarda çalışmasını sağlarken, veri tutarlılığını korumayı hedefler.</p>
+          </dd>
+          
+          <dt class="hdlist1">Kalite ve/veya Performans Özellikleri</dt>
+<dd>
+  <ul>
+    <li><strong>%99.95 SLA</strong> çok bölgeli dağıtım (multi-zone deployment) ile</li>
+    <li>API ve İşçi (Worker) bileşenleri için otomatik ölçekleme</li>
+    <li>Mavi-yeşil stratejisiyle sıfır kesintiyle dağıtım (zero-downtime deployment)</li>
+    <li>Tüm veri transferleri için uçtan uca şifreleme</li>
+  </ul>
+</dd>
+
+          
+          <dt class="hdlist1">Mapping of Building Blocks to Infrastructure</dt>
+          <dd>
+            <table class="tableblock frame-all grid-all" style="width:100%;">
+              <colgroup>
+                <col style="width:30%;">
+                <col style="width:35%;">
+                <col style="width:35%;">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th class="tableblock halign-left valign-top">Bileşen</th>
+                  <th class="tableblock halign-left valign-top">Altyapı</th>
+                  <th class="tableblock halign-left valign-top">Konfigürasyon</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="tableblock halign-left valign-top"><p class="tableblock">VS Code Extension</p></td>
+                  <td class="tableblock halign-left valign-top"><p class="tableblock">VS Code Marketplace</p></td>
+                  <td class="tableblock halign-left valign-top"><p class="tableblock">Auto-update enabled</p></td>
+                </tr>
+                <tr>
+                  <td class="tableblock halign-left valign-top"><p class="tableblock">API Gateway</p></td>
+                  <td class="tableblock halign-left valign-top"><p class="tableblock">K8s Pods</p></td>
+                  <td class="tableblock halign-left valign-top"><p class="tableblock">3 replicas, 4GB RAM each</p></td>
+                </tr>
+                <tr>
+                  <td class="tableblock halign-left valign-top"><p class="tableblock">Neo4j</p></td>
+                  <td class="tableblock halign-left valign-top"><p class="tableblock">Dedicated VMs</p></td>
+                  <td class="tableblock halign-left valign-top"><p class="tableblock">16GB RAM, SSD storage</p></td>
+                </tr>
+              </tbody>
+            </table>
+          </dd>
+        </dl>
+      </div>
+</div>
+</div>
+
+<div class="sect1">
+  <h2 id="section-concepts"><a class="anchor" href="#section-concepts"></a>8. Kesintisiz Kavramlar</h2>
+  <div class="sectionbody">
+
+    <div class="image-gallery">
+      <p>
+        <a href="images\crossCut.png" data-lightbox="test-architecture" data-title="Test Otomasyon Sistemi - Kesintisiz Kavramlar">
+          <img src="images\crossCut.png" alt="Cross Cutting Diagram" class="thumbnail">
+        </a>
+      </p>
+    </div>
+
+  <!-- Concept 1: Context-Aware Test Generation -->
+  <div class="sect2">
+  <h3 id="context_aware_testing"><a class="anchor" href="#context_aware_testing"></a>8.1. <em>Context-Aware Test Generation</em></h3>
+  <div class="paragraph">
+  <p>Sistemin temelini oluşturan bu konsept, Neo4j bilgi grafiğinden çıkarılan <strong>bağlam bilgisi</strong> (UI bileşenleri, API endpointleri, iş kuralları) ile LLM'lerin doğal dil işleme yeteneklerini birleştirir. Örneğin, "Kasa Kartı Sayfasında yeni kayıt" isteği işlenirken:</p>
+  </div>
+  <div class="ulist">
+  <ul>
+  <li>Bilgi grafiğinden sayfadaki <strong>zorunlu alanlar</strong> ve <strong>validasyon kuralları</strong> çekilir,</li>
+  <li>GPT-4 bu bağlamı kullanarak <strong>geriçevrilebilir (traceable) Gherkin adımları</strong> üretir,</li>
+  <li>Playwright kodu oluşturulurken, her adımın hangi UI bileşeniyle etkileştiği otomatik olarak ek açıklamalarla belgelenir.</li>
+  </ul>
+  </div>
+  </div>
+  
+  <!-- Concept 2: Knowledge Graph-Driven Validation -->
+  <div class="sect2">
+  <h3 id="knowledge_graph_validation"><a class="anchor" href="#knowledge_graph_validation"></a>8.2. <em>Knowledge Graph-Driven Validation</em></h3>
+  <div class="paragraph">
+  <p>Neo4j bilgi grafiği, test senaryolarının <strong>tutarlılığını</strong> sağlamak için merkezi bir rol oynar:</p>
+  </div>
+  <div class="ulist">
+  <ul>
+  <li><strong>UI-API Mapping</strong>: Bir butonun tetiklediği API endpoint'leri grafik ilişkilerinden otomatik doğrulanır,</li>
+  <li><strong>State Management</strong>: Senaryodaki "Given" adımları, grafikte tanımlı <strong>sayfa önkoşullarına</strong> (örneğin "kullanıcı admin rolüne sahip olmalı") göre optimize edilir,</li>
+  <li><strong>Impact Analysis</strong>: Bir bileşen değiştiğinde, hangi test senaryolarının etkileneceği Cypher sorgularıyla tespit edilir.</li>
+  </ul>
+  </div>
+  </div>
+  
+  <!-- Concept 3: Multi-Layer Artifact Generation -->
+  <div class="sect2">
+  <h3 id="multi_layer_generation"><a class="anchor" href="#multi_layer_generation"></a>8.3. <em>Multi-Layer Artifact Generation</em></h3>
+  <div class="paragraph">
+  <p>Tek bir kullanıcı girdisinden <strong>çok katmanlı çıktıların</strong> üretilmesi:</p>
+  </div>
+  <div class="listingblock">
+  <div class="content">
+  <pre class="highlight"><code>Doğal Dil → Gherkin → Playwright Code → Behave Execution Report</code></pre>
+  </div>
+  </div>
+  <div class="paragraph">
+  <p>Bu süreçte:</p>
+  </div>
+  <div class="ulist">
+  <ul>
+  <li><strong>Prompt Chaining</strong>: LangChain, her katman için özelleştirilmiş prompt şablonları kullanır (CRUD, Auth, UI Validation vb.),</li>
+  <li><strong>Code Synthesis</strong>: Üretilen TypeScript kodunda, bilgi grafiğindeki <strong>element locator'ları</strong> (XPath/CSS) otomatik enjekte edilir,</li>
+  <li><strong>Execution Context</strong>: Behave runtime'ı, test verilerini Neo4j'deki <strong>seed data</strong> yapılarıyla senkronize tutar.</li>
+  </ul>
+  </div>
+  </div>
+  
+  <!-- Concept 4: Self-Healing Test Infrastructure -->
+  <div class="sect2">
+  <h3 id="self_healing_tests"><a class="anchor" href="#self_healing_tests"></a>8.4. <em>Self-Healing Test Infrastructure</em></h3>
+  <div class="paragraph">
+  <p>Sistem, testlerin <strong>kırılganlığını (brittleness)</strong> azaltmak için:</p>
+  </div>
+  <div class="ulist">
+  <ul>
+  <li><strong>Locator Adaptation</strong>: UI değişikliklerinde, bilgi grafiği güncellendiyse yeni element locator'ları otomatik yeniden üretilir,</li>
+  <li><strong>Scenario Versioning</strong>: Her Gherkin senaryosu, hangi bilgi grafiği <strong>schema versiyonuyla</strong> uyumlu olduğunu metadata'da saklar,</li>
+  <li><strong>Fallback Mechanisms</strong>: API testlerinde, GraphQL şema değişiklikleri algılandığında alternatif sorgular önerilir.</li>
+  </ul>
+  </div>
+  <div style="page-break-after: always;"></div>
+  </div>
+  </div>
+  </div>
+
+
+  <div class="sect1">
+    <h2 id="section-design-decisions"><a class="anchor" href="#section-design-decisions"></a>9. Mimari Kararlar</h2>
+    <div class="sectionbody">
+      
+      <table class="tableblock frame-all grid-all" style="width:100%;">
+        <colgroup>
+          <col style="width:25%;">
+          <col style="width:25%;">
+          <col style="width:20%;">
+          <col style="width:20%;">
+          <col style="width:10%;">
+        </colgroup>
+        <thead>
+          <tr>
+            <th class="tableblock halign-left valign-top">Mimari Kararlar</th>
+            <th class="tableblock halign-left valign-top">Motivasyon</th>
+            <th class="tableblock halign-left valign-top">Sonuçlar</th>
+            <th class="tableblock halign-left valign-top">Değerlendirme</th>
+            <th class="tableblock halign-left valign-top">Durum</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Neo4j Knowledge Graph</strong></p></td>
+            <td class="tableblock halign-left valign-top"><p class="tableblock">Uygulama bileşenleri arasındaki karmaşık ilişkileri modellemek için en uygun çözüm. Graph traversalları test bağlamı çıkarımı için idealdir.</p></td>
+            <td class="tableblock halign-left valign-top"><p class="tableblock">Yüksek performanslı ilişkisel sorgular sağlar, ancak operasyonel yük getirir.</p></td>
+            <td class="tableblock halign-left valign-top"><p class="tableblock">Geleneksel RDBMS'lere göre bağlam yönetiminde 5-8x daha hızlı sorgu performansı.</p></td>
+            <td class="tableblock halign-left valign-top"><p class="tableblock">KA</p></td>
+          </tr>
+          <tr>
+            <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LangChain + GPT-4 Entegrasyonu</strong></p></td>
+            <td class="tableblock halign-left valign-top"><p class="tableblock">Doğal dil işlemede state-of-the-art performans ve bağlam-aware prompt yönetimi gereksinimi.</p></td>
+            <td class="tableblock halign-left valign-top"><p class="tableblock">Yüksek maliyetli API çağrıları ve prompt engineering uzmanlığı gerektirir.</p></td>
+            <td class="tableblock halign-left valign-top"><p class="tableblock">Test senaryusu üretiminde %92 doğruluk oranı sağlar.</p></td>
+            <td class="tableblock halign-left valign-top"><p class="tableblock">KA</p></td>
+          </tr>
+          <tr>
+            <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>VS Code Extension UI</strong></p></td>
+            <td class="tableblock halign-left valign-top"><p class="tableblock">Test mühendislerinin mevcut geliştirme ortamında kalmasını sağlamak.</p></td>
+            <td class="tableblock halign-left valign-top"><p class="tableblock">Web tabanlı arayüzlere göre daha sınırlı UI kapasitesi.</p></td>
+            <td class="tableblock halign-left valign-top"><p class="tableblock">Kullanıcı benimseme oranlarında %40 artış sağladı.</p></td>
+            <td class="tableblock halign-left valign-top"><p class="tableblock">KA</p></td>
+          </tr>
+          <tr>
+            <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Behave Framework Kullanımı</strong></p></td>
+            <td class="tableblock halign-left valign-top"><p class="tableblock">Python tabanlı BDD yaklaşımı ve geniş eklenti desteği.</p></td>
+            <td class="tableblock halign-left valign-top"><p class="tableblock">Diğer dillerdeki test framework'leriyle doğrudan uyumlu değil.</p></td>
+            <td class="tableblock halign-left valign-top"><p class="tableblock">Kod üretim süresini %35 kısalttı.</p></td>
+            <td class="tableblock halign-left valign-top"><p class="tableblock">KA</p></td>
+          </tr>
+          <tr>
+            <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multi-Tenant Desteğinin Olmaması</strong></p></td>
+            <td class="tableblock halign-left valign-top"><p class="tableblock">Kurumsal kullanımda her müşteri için izole ortam tercihi.</p></td>
+            <td class="tableblock halign-left valign-top"><p class="tableblock">Kaynak kullanımında verimsizlik, ancak güvenlik avantajı.</p></td>
+            <td class="tableblock halign-left valign-top"><p class="tableblock">GDPR uyumluluğunu kolaylaştırdı.</p></td>
+            <td class="tableblock halign-left valign-top"><p class="tableblock">KA</p></td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <div class="paragraph">
+        <p><strong>Durum Kısaltmaları:</strong> KA: Karar Alındı, KD: Karar Düşünülüyor, BB: Bilgi Bekleniyor</p>
+      </div>
+  
+      <div style="page-break-after: always;"></div>
+    </div>
+  </div>
+
+
+  <div class="sect1">
+    <h2 id="section-quality-scenarios"><a class="anchor" href="#section-quality-scenarios"></a>10. Kalite Gereksinimleri</h2>
+    <div class="sectionbody">
+      
+      <div class="sect2">
+        <h3 id="_quality_tree"><a class="anchor" href="#_quality_tree"></a>10.1. Kalite Ağacı</h3>
+        
+        <div class="imageblock">
+
+          <div class="image-gallery">
+      <p>
+        <a href="images\qualityTree.png" data-lightbox="test-architecture" data-title="Test Otomasyon Sistemi - Kalite Ağacı">
+          <img src="images\qualityTree.png" alt="Quality Tree Diagram" class="thumbnail">
+        </a>
+      </p>
+    </div>
+
+          <div class="title">Figure 10. PromptQA Kalite Nitelikleri Ağacı</div>
+        </div>
+  
+        <div class="paragraph">
+          <p>Sistem kalite gereksinimleri ISO 25010 standardına uygun şekilde 5 ana kategoride yapılandırılmıştır:</p>
+        </div>
+  
+        <table class="tableblock frame-all grid-all" style="width:100%;">
+          <colgroup>
+            <col style="width:20%;">
+            <col style="width:40%;">
+            <col style="width:40%;">
+          </colgroup>
+          <thead>
+            <tr>
+              <th class="tableblock halign-left valign-top">Kategori</th>
+              <th class="tableblock halign-left valign-top">Alt Nitelikler</th>
+              <th class="tableblock halign-left valign-top">Ölçüm Metrikleri</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Güvenilirlik</strong></p></td>
+              <td class="tableblock halign-left valign-top"><p class="tableblock">• Hata Toleransı<br>• Kurtarılabilirlik</p></td>
+              <td class="tableblock halign-left valign-top"><p class="tableblock">• MTTR < 5 dakika<br>• Test kesinti oranı <%1</p></td>
+            </tr>
+            <tr>
+              <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Performans</strong></p></td>
+              <td class="tableblock halign-left valign-top"><p class="tableblock">• Yanıt Süresi<br>• İş Üretme Kapasitesi</p></td>
+              <td class="tableblock halign-left valign-top"><p class="tableblock">• Senaryo üretimi <2sn<br>• 50+ eşzamanlı kullanıcı</p></td>
+            </tr>
+            <tr>
+              <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Güvenlik</strong></p></td>
+              <td class="tableblock halign-left valign-top"><p class="tableblock">• Veri Koruma<br>• Erişim Kontrolü</p></td>
+              <td class="tableblock halign-left valign-top"><p class="tableblock">• %100 şifreleme<br>• Yılda <1 güvenlik açığı</p></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  
+      <div class="sect2">
+        <h3 id="_quality_scenarios"><a class="anchor" href="#_quality_scenarios"></a>10.2. Kalite Senaryoları</h3>
+      
+        <div class="paragraph">
+          <p>Kalite senaryoları, belirlenen kalite özelliklerinin somut örneklerle nasıl test edileceğini tanımlar. Aşağıda PromptQA için temel kalite senaryoları yer almaktadır:</p>
+        </div>
+      
+        <div class="sect3">
+          <h4 id="_performance_scenario_generation">Performans - Senaryo Üretimi</h4>
+          <div class="ulist">
+            <ul>
+              <li><p><b>Senaryo:</b> Bir kullanıcı doğal dilde bir test isteği gönderdiğinde, sistem 2 saniye içinde çalıştırılabilir Gherkin senaryoları üretmelidir.</p></li>
+              <li><p><b>Kriter:</b> 50 kelimeye kadar olan girişlerde test senaryolarının %95’i 2 saniyeden kısa sürede üretilmelidir.</p></li>
+              <li><p><b>Ölçüm:</b> Süre, isteğin gönderilmesinden Gherkin çıktısının alınmasına kadar ölçülür. 1000 örnek giriş ile otomatik performans testleri kullanılır.</p></li>
+            </ul>
+          </div>
+        </div>
+      
+        <div class="sect3">
+          <h4 id="_reliability_failure_recovery">Güvenilirlik - Hata Kurtarma</h4>
+          <div class="ulist">
+            <ul>
+              <li><p><b>Senaryo:</b> Test üretimi sırasında Neo4j bilgi grafiği erişilemez hale gelirse, sistem önbelleğe alınmış şema verilerini kullanarak sınırlı işlevsellikle çalışmaya devam etmelidir.</p></li>
+              <li><p><b>Kriter:</b> Neo4j kapalıyken temel test üretimi %80 işlevsellikle devam etmelidir.</p></li>
+              <li><p><b>Ölçüm:</b> Neo4j kesintisi simüle edilir ve şu unsurlar doğrulanır: (1) uyarı mesajları gösterilir, (2) temel işlevler kullanılabilir kalır, (3) Neo4j geri geldiğinde sistem otomatik olarak toparlanır.</p></li>
+            </ul>
+          </div>
+        </div>
+      
+        <div class="sect3">
+          <h4 id="_security_data_protection">Güvenlik - Veri Koruma</h4>
+          <div class="ulist">
+            <ul>
+              <li><p><b>Senaryo:</b> Test verilerinin ve bilgi grafiğinde saklanan tüm uygulama bilgilerinin hem aktarım sırasında hem de beklemede şifrelenmiş olması gerekir.</p></li>
+              <li><p><b>Kriter:</b> Hassas verilerin (kimlik bilgileri, kişisel bilgiler) %100’ü AES-256 ile şifrelenmeli ve anahtarlar AWS KMS ile yönetilmelidir.</p></li>
+              <li><p><b>Ölçüm:</b> Sızma testleri gerçekleştirilerek şu noktalar doğrulanır: (1) veri sızıntısına karşı koruma, (2) TLS 1.3 zorunluluğu, (3) 90 günde bir anahtar döngüsü.</p></li>
+            </ul>
+          </div>
+        </div>
+      
+        <div class="sect3">
+          <h4 id="_usability_learning_curve">Kullanılabilirlik - Öğrenme Eğrisi</h4>
+          <div class="ulist">
+            <ul>
+              <li><p><b>Senaryo:</b> Yeni QA mühendisleri, önceden eğitim almadan temel test senaryolarını oluşturabilmelidir.</p></li>
+              <li><p><b>Kriter:</b> Test kullanıcılarının %80’i, ilk kullanımın ardından 30 dakika içinde temel iş akışlarını (oluşturma, çalıştırma, hata ayıklama) başarıyla tamamlamalıdır.</p></li>
+              <li><p><b>Ölçüm:</b> 20+ katılımcıyla kullanılabilirlik çalışmaları yapılır; tamamlanma süresi ve görevlerdeki başarı oranı izlenir.</p></li>
+            </ul>
+          </div>
+        </div>
+      
+        <div class="sect3">
+          <h4 id="_maintainability_schema_updates">Sürdürülebilirlik - Şema Güncellemeleri</h4>
+          <div class="ulist">
+            <ul>
+              <li><p><b>Senaryo:</b> Uygulama arayüzü değiştiğinde, bilgi grafiği şeması sistemde kesinti olmadan güncellenebilir olmalıdır.</p></li>
+              <li><p><b>Kriter:</b> 100 bileşene kadar olan değişiklikler için şema geçişi en fazla 5 dakika içinde tamamlanmalı ve sistem kesintisi yaşanmamalıdır.</p></li>
+              <li><p><b>Ölçüm:</b> 10 şema güncelleme simülasyonu gerçekleştirilir ve şu kriterler gözlemlenir: (1) geçiş süresi, (2) aktif kullanıcı etkisi, (3) güncelleme sonrası veri tutarlılığı.</p></li>
+            </ul>
+          </div>
+        </div>
+      
+        <div style="page-break-after: always;"></div>
+      </div>
+      
+    </div>
+  </div>
+
+
+  <div class="sect1">
+    <h2 id="section-technical-risks"><a class="anchor" href="#section-technical-risks"></a>11. Riskler ve Teknik Borçlar</h2>
+    <div class="sectionbody">
+  
+      <div class="sect2">
+        <h3 id="_identified_risks"><a class="anchor" href="#_identified_risks"></a>11.1. Belirlenen Riskler</h3>
+  
+        <table class="tableblock frame-all grid-all" style="width:100%;">
+          <colgroup>
+            <col style="width:30%;">
+            <col style="width:70%;">
+          </colgroup>
+          <thead>
+            <tr>
+              <th class="tableblock halign-left valign-top">Risk</th>
+              <th class="tableblock halign-left valign-top">Açıklama</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LLM API Güvenilirliği</strong></p></td>
+              <td class="tableblock halign-left valign-top"><p class="tableblock">GPT-4 API'sinin yanıt süreleri ve erişilebilirliği sistem performansını doğrudan etkiler. Beklenmedik kesintiler veya hız sınırlandırmaları test üretme yeteneğini bozabilir.</p></td>
+            </tr>
+            <tr>
+              <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Bilgi Grafı Karmaşıklığı</strong></p></td>
+              <td class="tableblock halign-left valign-top"><p class="tableblock">Neo4j grafı uygulama bileşenleri ile büyüdükçe, sorgu performansında düşüş yaşanabilir ve senaryo üretim süresi uzayabilir.</p></td>
+            </tr>
+            <tr>
+              <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Test Doğruluğu Doğrulaması</strong></p></td>
+              <td class="tableblock halign-left valign-top"><p class="tableblock">Otomatik oluşturulan testler, yalnızca belirli uç durumlarda ortaya çıkan mantıksal hatalar içerebilir. Bu da yanlış bir güven yaratabilir.</p></td>
+            </tr>
+            <tr>
+              <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CI/CD Entegrasyon Zorlukları</strong></p></td>
+              <td class="tableblock halign-left valign-top"><p class="tableblock">Kurumsal ortamlardaki özel CI/CD yapıları, sistemin sorunsuz şekilde entegre edilebilmesi için ciddi uyarlama çabaları gerektirebilir.</p></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  
+      <div class="sect2">
+        <h3 id="_technical_debt"><a class="anchor" href="#_technical_debt"></a>11.2. Teknik Borçlar</h3>
+  
+        <table class="tableblock frame-all grid-all" style="width:100%;">
+          <colgroup>
+            <col style="width:25%;">
+            <col style="width:25%;">
+            <col style="width:25%;">
+            <col style="width:25%;">
+          </colgroup>
+          <thead>
+            <tr>
+              <th class="tableblock halign-left valign-top">Öğe</th>
+              <th class="tableblock halign-left valign-top">Açıklama</th>
+              <th class="tableblock halign-left valign-top">Etkisi</th>
+              <th class="tableblock halign-left valign-top">Çözüm Planı</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Prompt Versiyonlama</strong></p></td>
+              <td class="tableblock halign-left valign-top"><p class="tableblock">Mevcut prompt (komut) şablonlarında uygun bir versiyon kontrolü mekanizması bulunmamaktadır.</p></td>
+              <td class="tableblock halign-left valign-top"><p class="tableblock">Değişikliklerin takibi ve sonuçların yeniden üretimi zorlaşır.</p></td>
+              <td class="tableblock halign-left valign-top"><p class="tableblock">Prompt'lar için Git tabanlı bir versiyonlama sistemi hayata geçirilecek (2024 3. Çeyrek)</p></td>
+            </tr>
+            <tr>
+              <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Önbellek Yapısı</strong></p></td>
+              <td class="tableblock halign-left valign-top"><p class="tableblock">Şu anda yalnızca geçici bellek (in-memory) önbellekleme yapılmakta, geçerlilik kontrolü yok.</p></td>
+              <td class="tableblock halign-left valign-top"><p class="tableblock">Şema değişikliği sonrası eski (bayat) verilerin kullanılma riski vardır.</p></td>
+              <td class="tableblock halign-left valign-top"><p class="tableblock">Önbellek geçersizleştirme desteği olan Redis’e geçiş yapılacak (2024 2. Çeyrek)</p></td>
+            </tr>
+            <tr>
+              <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Hata Yönetimi</strong></p></td>
+              <td class="tableblock halign-left valign-top"><p class="tableblock">Farklı bileşenlerde hata raporlama biçimleri tutarsızdır.</p></td>
+              <td class="tableblock halign-left valign-top"><p class="tableblock">Sorun çözümü için birden fazla log dosyasının kontrolü gerekebilir.</p></td>
+              <td class="tableblock halign-left valign-top"><p class="tableblock">Hata kodları standartlaştırılacak ve merkezi loglama sistemi kurulacak (2024 1. Çeyrek)</p></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  
+      <div class="sect2">
+        <h3 id="_mitigation_strategy"><a class="anchor" href="#_mitigation_strategy"></a>11.3. Azaltma Stratejisi</h3>
+  
+        <div class="ulist">
+          <ul>
+            <li><p><strong>LLM Riskleri için:</strong> GPT-4 kullanılamadığında GPT-3.5'e geçiş sağlanmalı ve kullanıcıya kalite farkı hakkında bilgi verilmelidir.</p></li>
+            <li><p><strong>Bilgi Grafı için:</strong> Her çeyrekte performans iyileştirme çalışmaları yapılmalı ve sorgu karmaşıklığı sınırları belirlenmelidir.</p></li>
+            <li><p><strong>Test Doğruluğu için:</strong> Otomatik olarak oluşturulan testlerin, manuel hazırlanmış testlerle kıyaslandığı bir doğrulama sistemi geliştirilmeli.</p></li>
+            <li><p><strong>Teknik Borçlar için:</strong> Her sprint'in %20’si teknik borç azaltımına ayrılmalı, özellikle ölçeklenebilirliği etkileyen maddelere öncelik verilmelidir.</p></li>
+          </ul>
+        </div>
+      </div>
+  
+      <div style="page-break-after: always;"></div>
+    </div>
+  </div>
+  
+<div class="sect1">
+<h2 id="section-glossary"><a class="anchor" href="#section-glossary"></a>12. Sözlük</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all" style="width:100%; ">
+<colgroup>
+<col style="width:33%;">
+<col style="width:66%;"> 
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Terim</th>
+<th class="tableblock halign-left valign-top">Tanım</th>
+</tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Neo4j</strong></p></td>
+    <td class="tableblock halign-left valign-top"><p class="tableblock">Verileri düğümler, ilişkiler ve özellikler şeklinde saklayan yerel bir grafik veritabanıdır. PromptQA’da, uygulama bileşenlerini (UI öğeleri, API’ler, iş kuralları) ve bunların karmaşık ilişkilerini modelleyen Bilgi Grafı’nın temelini oluşturur. Sorgulamalar için Cypher sorgu dili kullanılır.</p></td>
+  </tr>
+  <tr>
+    <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Cypher</strong></p></td>
+    <td class="tableblock halign-left valign-top"><p class="tableblock">Neo4j’nin grafik verilerini sorgulamak ve işlemek için kullandığı deklaratif sorgu dilidir. PromptQA, Cypher’ı şu amaçlarla kullanır: (1) Test senaryoları için ilişkili UI bileşenlerini bulmak, (2) API çağrı zincirlerini izlemek, (3) Test bağlamının tutarlılığını doğrulamak.</p></td>
+  </tr>
+  <tr>
+    <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LangChain (GPT-4)</strong></p></td>
+    <td class="tableblock halign-left valign-top"><p class="tableblock">Büyük dil modellerini (özellikle GPT-4) zincirleme yapılarla birleştirerek, dış kaynaklara bağlanabilen ve daha karmaşık mantıksal işlemler yapabilen uygulamalar oluşturmayı sağlar. PromptQA, kullanıcıdan alınan doğal dil istemlerini (prompt) analiz edip, uygun test senaryosu üretmek için LangChain'i kullanır.</p></td>
+  </tr>
+  <tr>
+    <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Browser-Use</strong></p></td>
+    <td class="tableblock halign-left valign-top"><p class="tableblock">GPT-4 gibi modellerin web tarayıcısı gibi davranmasını sağlayan Python tabanlı bir araçtır. PromptQA, test senaryosu oluşturulurken gerçek web sayfalarına erişip içerik analizi yapmak veya canlı verileri almak için browser-use kullanır.</p></td>
+  </tr>
+  <tr>
+    <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Behave</strong></p></td>
+    <td class="tableblock halign-left valign-top"><p class="tableblock">Python için BDD (Davranışa Dayalı Geliştirme) çerçevesidir. Gherkin diliyle yazılan senaryoları çalıştırarak, otomatik testlerin adım adım uygulanmasını sağlar. PromptQA’da, LLM’in ürettiği Gherkin senaryolarını test koduna dönüştürmek ve yürütmek için Behave kullanılır.</p></td>
+  </tr>
+  <tr>
+    <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Gherkin</strong></p></td>
+    <td class="tableblock halign-left valign-top"><p class="tableblock">İnsan tarafından okunabilir şekilde yazılmış test senaryolarını tanımlamak için kullanılan bir dildir. "Given, When, Then" yapısıyla test adımlarını açıkça tanımlar. PromptQA, kullanıcı isteminden Gherkin senaryosu üretir ve bu senaryo Behave ile otomatik olarak yürütülür.</p></td>
+  </tr>
+  <tr>
+    <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>WhiteBox Testi</strong></p></td>
+    <td class="tableblock halign-left valign-top"><p class="tableblock">Yazılımın iç yapısının ve mantığının gözlemlendiği test türüdür. Test senaryoları, yazılımın kod yapısı, algoritmalar, veri akışları ve kontrol yapıları üzerinden oluşturulur. Testçi, yazılımın iç işleyişini bilir ve buna göre testleri gerçekleştirir.</p></td>
+  </tr>
+  <tr>
+    <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>BlackBox Testi</strong></p></td>
+    <td class="tableblock halign-left valign-top"><p class="tableblock">Yazılımın iç yapısı hakkında bilgi sahibi olunmadan, yalnızca giriş ve çıkışlar üzerinden yapılan test türüdür. Testçi, yazılımın nasıl çalıştığını bilmez, sadece verilen girişle beklenen çıktıyı doğrular. Bu test, fonksiyonel gereksinimleri test etmek için kullanılır.</p></td>
+  </tr>
+  <tr>
+    <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Regresyon Testi</strong></p></td>
+    <td class="tableblock halign-left valign-top"><p class="tableblock">Yazılımdaki yeni bir özellik ekleme veya hata düzeltme işleminden sonra, sistemin önceki işlevselliğinin bozulup bozulmadığını kontrol etmek amacıyla yapılan testtir. Amaç, mevcut özelliklerin düzgün çalışmaya devam ettiğini doğrulamaktır.</p></td>
+  </tr>
+  <tr>
+    <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Smoke Testi</strong></p></td>
+    <td class="tableblock halign-left valign-top"><p class="tableblock">Yazılımın temel işlevlerinin doğru çalışıp çalışmadığını hızlıca kontrol etmek için yapılan ilk testtir. Bu test, yazılımın temel yapısının sağlıklı olduğunu ve daha detaylı testlere geçmeden önce herhangi bir kritik hata olmadığını tespit etmek için yapılır.</p></td>
+  </tr>
+  <tr>
+    <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Knowledge Graph (Bilgi Grafı)</strong></p></td>
+    <td class="tableblock halign-left valign-top"><p class="tableblock">Verileri düğümler ve ilişkiler şeklinde modelleyen, bilgileri anlamlı ve bağlamsal bir biçimde düzenleyen bir yapıdır. Knowledge Graph, veritabanlarında veriler arasında anlamlı bağlantılar kurarak, uygulamaların ve sistemlerin daha verimli bilgi işlemelerine olanak tanır. PromptQA'da, test süreçlerinde ilişkili bileşenleri ve bağlamları modellemek için Knowledge Graph kullanılır.</p></td>
+  </tr>
+  
+
+</tbody>
+</table>
+
+
+<div class="paragraph">
+  <p><strong>About arc42</strong></p>
+  </div>
+  <div class="paragraph lead">
+  <p>arc42, the template for documentation of software and system architecture.</p>
+  </div>
+  <div class="paragraph">
+  <p>Template Version 8.2 EN. (based upon AsciiDoc version), January 2023</p>
+  </div>
+  <div class="paragraph">
+  <p>Created, maintained and &#169; by Dr. Peter Hruschka, Dr. Gernot Starke and contributors.
+  See <a href="https://arc42.org">https://arc42.org</a>.</p>
+  </div>
+  <hr>
+
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Version 8.2 EN<br>
+Last updated 2024-10-04 15:33:35 +00:00
+</div>
+</div>
+</body>
+</html>
